@@ -1,14 +1,18 @@
 {
-  "name": "simple-component",
-  "version": "1.0.0",
+  "name": "simple-component-native",
+  "version": "1.0.3",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "webpack-dev-server --watch --mode development --config tools/webpack.config.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ElemeFE/element.git"
+  },
+  "author": "tranlehaiquan@gmail.com",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.2.3",
@@ -25,10 +29,10 @@
     "style-loader": "^0.23.1",
     "webpack": "^4.28.3",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.14"
-  },
-  "dependencies": {
+    "webpack-dev-server": "^3.1.14",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
+  },
+  "dependencies": {
   }
 }

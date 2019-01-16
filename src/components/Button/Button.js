@@ -7,7 +7,7 @@ export default class Button extends Component {
     const { onClick } = this.props;
 
     return (
-      <button onClick={onClick} className="sp_button">
+      <button onClick={onClick} className="sp-button">
         Test
       </button>
     )
