@@ -18,6 +18,7 @@ const config = {
     path: path.resolve(__dirname, '../dist'),
     // we can use "substitutions" in file names like [name] and [hash]
     // name will be `App` because that is what we used above in our entry
+    libraryTarget: 'commonjs2',
     filename: 'index.js'
   },
 
@@ -26,7 +27,7 @@ const config = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
+        exclude: /(node_modules|bower_components|build)/,
         use: ["babel-loader"]
       },
       {
