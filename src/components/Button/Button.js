@@ -1,25 +1,40 @@
 import React, { Component } from 'react'
 import propTypes from 'prop-types';
-import './Button.scss';
 
 export default class Button extends Component {
   render() {
-    const { onClick } = this.props;
+    const { 
+      autoFocus, 
+      disabled, 
+      nativeType, 
+      renderButton,
+      ...restProps
+    } = this.props;
 
     return (
-      <button onClick={onClick} className="sp-button">
-        Test
+      <button 
+        autoFocus={autoFocus}
+        disabled={disabled}
+        type={nativeType}
+        className="button"
+        {...restProps}
+      >
+        { renderButton ? renderButton() : this.props.children }
       </button>
     )
   }
 }
 
 Button.propTypes = {
-  onClick: propTypes.func
+  autoFocus: propTypes.bool,
+  disabled: propTypes.bool,
+  nativeType: propTypes.oneOf(['button', 'submit', 'reset']),
+  renderButton: propTypes.func
 }
 
 Button.defaultProps = {
-  onClick: () => {
-    console.log('click')
-  }
+  autoFocus: false,
+  disabled: false,
+  nativeType: 'button',
+  renderButton: null
 }

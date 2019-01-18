@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './Select.scss';
 
 export default class Select extends Component {
   render() {

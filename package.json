@@ -1,16 +1,16 @@
 {
   "name": "simple-component-native",
-  "version": "1.0.4",
+  "version": "1.0.10",
   "description": "Simple react component go from basic to adavance",
   "main": "dist/index.js",
   "scripts": {
-    "start": "webpack-dev-server --watch --mode development --config tools/webpack.config.js",
+    "start": "webpack-dev-server --watch --mode development --config tools/webpack.dev.js",
     "build": "webpack --mode production --config tools/webpack.prod.js"
   },
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git@github.com:ElemeFE/element.git"
+    "url": "git@github.com:tranlehaiquan/simple-component.git"
   },
   "author": "tranlehaiquan@gmail.com",
   "license": "MIT",
@@ -20,10 +20,12 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^1.0.0",
     "css-loader": "^2.1.0",
     "eslint": "^5.12.0",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-react": "^7.12.3",
+    "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.11.0",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
@@ -35,5 +37,7 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14"
   },
-  "dependencies": {}
+  "dependencies": {
+    "classnames": "^2.2.6"
+  }
 }
