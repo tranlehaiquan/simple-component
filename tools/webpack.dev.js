@@ -22,7 +22,10 @@ const config = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: {
+          loader: "babel-loader", 
+          options: require('../babelrc.js')()
+        }
       },
       {
         test: /\.(scss)$/,
@@ -57,7 +60,6 @@ const config = {
     contentBase: path.join(__dirname, '../dist'),
     port: 1403,
     open: 'Chrome',
-    hotOnly: true
   }
 };
 
