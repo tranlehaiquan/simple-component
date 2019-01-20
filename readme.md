@@ -2,8 +2,10 @@
 
 Project Reactjs Component. Go from scratch /skrætʃ/.
   - [x] Step up webpack to dev, transpiler react syntax, webpack dev serve.
+  - [x] Publish project to NPM (Defined which one will be install)
   - [ ] Step up eslint.
-  - [x] Publish project to NPM (Defined with one will be install)
+  - [ ] Step up test
+  - [ ] Step up CI/CD
 
 ## Step up project:
 
