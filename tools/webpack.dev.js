@@ -22,10 +22,13 @@ const config = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader", 
-          options: require('../babelrc.js')()
-        }
+        use: [
+          {
+            loader: 'babel-loader',
+            options: require('../babelrc.js')()
+          },
+          'eslint-loader'
+        ]
       },
       {
         test: /\.(scss)$/,
@@ -60,6 +63,7 @@ const config = {
     contentBase: path.join(__dirname, '../dist'),
     port: 1403,
     open: 'Chrome',
+    stats: 'minimal'
   }
 };
 
