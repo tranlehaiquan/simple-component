@@ -1,3 +1,23 @@
+$btn-p-x: 1em;
+$btn-p-y: 0.75em;
+$btn-default-bg: transparent;
+$btn-default-border-color: #ccc;
+$btn-default-round: 4px;
+
 .button {
-  padding: 1em;
+  padding: $btn-p-y $btn-p-x;
+  background-color: $btn-default-bg;
+  border: 1px solid $btn-default-border-color;
+  border-radius: $btn-default-round;
+  cursor: pointer;
+}
+
+.button--disabled {
+  cursor: not-allowed;
+}
+
+@each $color, $value in $theme-color {
+  .button--#{$color} {
+    @include button-variant($value);
+  }
 }

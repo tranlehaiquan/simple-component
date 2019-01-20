@@ -1,17 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../styles/index.scss';
-
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        <Button>
-          Hello
-        </Button>
-      </div>
-    )
-  }
-}
+import App from './App';
 
 ReactDOM.render(<App />, document.getElementById('root'));
+
+// if(module.hot) {
+//   module.hot.accept('./App', () => {
+//     var NextApp = require('./App').default;
+//     ReactDOM.render(<NextApp />, document.getElementById('root'));
+//   });
+// }

@@ -1,0 +1,10 @@
+@mixin button-variant($color) {
+  background-color: $color;
+  border: $color;
+  color: color-yiq($color);
+  &:hover {
+    background-color: lighten($color, $amount: 5);
+    border: lighten($color, $amount: 5);
+    transition: .3s background-color, .3s border;
+  }
+}
