@@ -14,9 +14,9 @@ export default class Button extends Component {
       ...restProps
     } = this.props;
 
-    const btnTypeClassname = type ? `button--${type}` : '';
-    const btnClassnames = classnames('button', btnTypeClassname, {
-      'button--disabled': disabled
+    const btnTypeClassname = type ? `sp-button--${type}` : '';
+    const btnClassnames = classnames('sp-button', btnTypeClassname, {
+      'sp-button--disabled': disabled
     });
 
     return (

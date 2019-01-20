@@ -4,7 +4,7 @@ $btn-default-bg: transparent;
 $btn-default-border-color: #ccc;
 $btn-default-round: 4px;
 
-.button {
+.sp-button {
   padding: $btn-p-y $btn-p-x;
   background-color: $btn-default-bg;
   border: 1px solid $btn-default-border-color;
@@ -12,12 +12,12 @@ $btn-default-round: 4px;
   cursor: pointer;
 }
 
-.button--disabled {
+.sp-button--disabled {
   cursor: not-allowed;
 }
 
 @each $color, $value in $theme-color {
-  .button--#{$color} {
+  .sp-button--#{$color} {
     @include button-variant($value);
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "simple-component-native",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Simple react component go from basic to adavance",
   "main": "dist/index.js",
   "scripts": {

@@ -20,7 +20,10 @@ const config = {
       {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components|build)/,
-        use: ["babel-loader"]
+        use: {
+          loader: "babel-loader", 
+          options: require('../babelrc.js')('production')
+        }
       }
     ]
   },
