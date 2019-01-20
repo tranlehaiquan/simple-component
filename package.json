@@ -4,7 +4,7 @@
   "description": "Simple react component go from basic to adavance",
   "main": "dist/index.js",
   "scripts": {
-    "start": "webpack-dev-server --watch --mode development --config tools/webpack.dev.js",
+    "start": "webpack-dev-server --hot --mode development --config tools/webpack.dev.js",
     "build": "webpack --mode production --config tools/webpack.prod.js"
   },
   "keywords": [],
@@ -28,16 +28,17 @@
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.11.0",
     "prop-types": "^15.6.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.28.3",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.1.14",
+    "react-dom": "^16.7.0",
+    "classnames": "^2.2.6",
+    "react-hot-loader": "^4.6.3"
   },
   "dependencies": {
-    "classnames": "^2.2.6"
+    "react": "^16.7.0"
   }
 }

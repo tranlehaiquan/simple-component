@@ -47,7 +47,6 @@ const config = {
   },
   // finally we pass it an array of our plugins
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       title: 'Simple components',
       template: path.resolve(__dirname, '..', 'src', 'index.html')
@@ -58,7 +57,7 @@ const config = {
     contentBase: path.join(__dirname, '../dist'),
     port: 1403,
     open: 'Chrome',
-    hot: true
+    hotOnly: true
   }
 };
 
