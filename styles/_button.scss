@@ -2,7 +2,7 @@ $btn-p-x: 1em;
 $btn-p-y: 0.75em;
 $btn-default-bg: transparent;
 $btn-default-border-color: #ccc;
-$btn-default-round: 4px;
+$btn-default-round: 6px;
 
 .sp-button {
   padding: $btn-p-y $btn-p-x;
@@ -14,6 +14,8 @@ $btn-default-round: 4px;
 
 .sp-button--disabled {
   cursor: not-allowed;
+  border-color: transparentize($btn-default-border-color, 0.3);
+  color: transparentize($btn-default-border-color, 0.1);
 }
 
 @each $color, $value in $theme-color {
