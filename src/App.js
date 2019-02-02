@@ -1,11 +1,30 @@
 import React, { Component } from 'react';
 import Button from './components/Button/Button';
 import { hot } from 'react-hot-loader';
+import Radio from './components/Radio/Radio';
+import RadioGroup from './components/Radio/RadioGroup';
 
 class App extends Component {
+	state = {
+		value: 1
+	}
+
+	handleOnChange = (value) => this.setState({value})
+
 	render() {
 		return (
 			<div style={styles.wrapper}>
+				<div style={{padding: '1em'}}>
+					<RadioGroup 
+						name="hello"
+						value={this.state.value} 
+						onChange={this.handleOnChange} 
+					>
+						<Radio value="1">Option 1</Radio>
+						<Radio value="2">Option 2</Radio>
+						<Radio value="3">Option 3</Radio>
+					</RadioGroup>
+				</div>
 				<div>
 					<Button style={styles.btn}>
 						Simple button
