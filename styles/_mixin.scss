@@ -15,7 +15,7 @@
 
   &.sp-button--disabled {
     background-color: transparentize($color, 0.9);
-    border-color: transparentize($color, 0.6);
-    color: transparentize($color, 0.3);
+    border-color: transparentize($color, 0.8);
+    color: transparentize($color, 0.5);
   }
 }
