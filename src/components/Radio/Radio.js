@@ -3,12 +3,21 @@ import propTypes from 'prop-types';
 import classnames from 'classnames';
 
 class Radio extends Component {
-	handleClick = () => {
+	handleOnChange = () => {
 		const { onChange, value } = this.props;
 
 		onChange(value);
 	}
 	
+	handleKeyPress = (e) => {
+		const keyCodeOfSpace = 32;
+
+		if (e.keyCode !== keyCodeOfSpace) return;
+
+		const { onChange, value } = this.props;
+		onChange(value);
+	}
+
 	render() {
 		const { children, checked, value, name } = this.props;
 		const classnameRadio = classnames('sp-radio__item', {
@@ -16,16 +25,21 @@ class Radio extends Component {
 		});
 
 		return (
-			<label className={classnameRadio} onClick={this.handleClick}>
+			<label className={classnameRadio}>
 				<input 
 					type="radio"
 					className="sp-radio__input" 
 					name={name} 
 					value={value} 
-					tabIndex="-1" 
+					tabIndex="-1"
 					checked={checked}
+					onChange={this.handleOnChange}
 				/>
-				<span className="sp-radio__icon" tabIndex="0" />
+				<span 
+					className="sp-radio__icon" 
+					tabIndex="0"
+					onKeyDown={this.handleKeyPress} 
+				/>
 				<span className="sp-radio__text">{ children }</span>
 			</label>
 		);
