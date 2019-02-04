@@ -1,0 +1,70 @@
+$radio-icon-d: 14px;
+$radio-icon-checked-d: $radio-icon-d / 2;
+$icon-height: 1em;
+
+.sp-radio__group {
+  
+}
+
+.sp-radio__item {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  &:not(:first-of-type) {
+    margin-left: 2em;
+  }
+}
+
+.sp-radio__item--checked {
+  color: $primary;
+}
+
+.sp-radio__icon {
+  vertical-align: middle;
+  position: relative;
+  display: inline-block;
+  margin-right: 0.5em;
+  line-height: $icon-height;
+  width: $icon-height;
+  height: $icon-height;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: relative;
+  &::before {
+    $d: 4px ;
+    content: "";
+    width: $d;
+    height: $d;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transition: .3s transform;
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.sp-radio__text {
+  line-height: 1;
+}
+
+// why style base on :checked?
+// because when js is disabled, 
+// sp-radio__item--checked is no longer working
+.sp-radio__input {
+  display: none;
+  &:checked {
+    ~ .sp-radio__text {
+      color: $primary;
+    }
+
+    ~ .sp-radio__icon {
+      background-color: $primary;
+      border-color: $primary;
+      &::before {    
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+}
