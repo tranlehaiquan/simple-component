@@ -7,7 +7,7 @@ const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
-module.exports = function (env, agr) {
+module.exports = function (env = {}, agr) {
   const config = {
     entry: path.resolve(__dirname, '../src/build.js'),
     output: {
