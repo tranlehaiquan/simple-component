@@ -21,7 +21,7 @@ class App extends Component {
 						onChange={this.handleOnChange} 
 					>
 						<Radio value="1">Option 1</Radio>
-						<Radio value="2">Option 2</Radio>
+						<Radio value="2" disabled>Option 2</Radio>
 						<Radio value="3">Option 3</Radio>
 					</RadioGroup>
 				</div>

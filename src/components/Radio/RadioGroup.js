@@ -39,8 +39,8 @@ class RadioGroup extends Component {
 RadioGroup.propTypes = {
 	children: propTypes.node,
 	value: propTypes.oneOfType([
-		propTypes.number, 
-		propTypes.string, 
+		propTypes.number,
+		propTypes.string,
 		propTypes.bool 
 	]),
 	name: propTypes.string,
