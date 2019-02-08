@@ -8,17 +8,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = function (env, agr) {
-  const plugins = [
-    new CleanWebpackPlugin("dist", {
-      root: path.resolve(__dirname, '..')
-    })
-  ];
-
-  if (!env.isPublish) {
-    isPublish.push(new BundleAnalyzerPlugin());
-  }
-
-  return {
+  const config = {
     entry: path.resolve(__dirname, '../src/build.js'),
     output: {
       path: path.resolve(__dirname, '../dist'),
@@ -37,6 +27,16 @@ module.exports = function (env, agr) {
       }]
     },
     // finally we pass it an array of our plugins
-    plugins
+    plugins: [
+      new CleanWebpackPlugin("dist", {
+        root: path.resolve(__dirname, '..')
+      })
+    ]
   }
+
+  if (!env.isPublish) {
+    config.plugins.push(new BundleAnalyzerPlugin());
+  }
+
+  return config;
 };
