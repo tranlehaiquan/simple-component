@@ -1,4 +1,4 @@
-module.exports = function(api = 'development') {
+module.exports = function (api = 'development') {
   const plugins = [
     "@babel/plugin-proposal-class-properties"
   ]
@@ -15,8 +15,8 @@ module.exports = function(api = 'development') {
             "node": "current"
           }
         }
-      ]
-      , "@babel/preset-react"],
+      ], "@babel/preset-react"
+    ],
     "plugins": plugins
-  }  
+  }
 }
