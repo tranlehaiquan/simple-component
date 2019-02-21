@@ -22,7 +22,7 @@ module.exports = function (env = {}, agr) {
         exclude: /(node_modules|bower_components|build)/,
         use: {
           loader: "babel-loader",
-          options: require('../babelrc.js')('production')
+          options: require('../babel.config.js')
         }
       }]
     },
@@ -35,7 +35,7 @@ module.exports = function (env = {}, agr) {
   }
 
   if (!env.isPublish) {
-    config.plugins.push(new BundleAnalyzerPlugin());
+    // config.plugins.push(new BundleAnalyzerPlugin());
   }
 
   return config;
