@@ -7,7 +7,6 @@
  * - Hot module replacement for react
  */
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
@@ -25,7 +24,7 @@ const config = {
         use: [
           {
             loader: 'babel-loader',
-            options: require('../babelrc.js')()
+            options: require('../babel.config.js')
           },
           'eslint-loader'
         ]

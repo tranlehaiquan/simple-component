@@ -14,6 +14,10 @@ Project Reactjs Component. Go from scratch /skrætʃ/.
   - [ ] Step up CI/CD
   - [ ] Step up precommit? (Optional)
 
+## Test
+
+- Snapshots
+
 ## Step up project:
 
 For detail go google search : ).
