@@ -3,7 +3,9 @@ module.exports = {
     test: {
     },
     dev: {
-      plugins: []
+      plugins: [
+        "react-hot-loader/babel"
+      ]
     }
   },
   "presets": [
@@ -17,6 +19,5 @@ module.exports = {
   ],
   plugins: [
     "@babel/plugin-proposal-class-properties",
-    "react-hot-loader/babel"
   ]
 }
