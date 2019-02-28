@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render Radios with, radio group 1`] = `
+exports[`make snapshot Render Radios with, radio group 1`] = `
 <div
   className="sp-radio__group"
 >
@@ -79,7 +79,7 @@ exports[`Render Radios with, radio group 1`] = `
 </div>
 `;
 
-exports[`Render single Radio 1`] = `
+exports[`make snapshot Render single Radio 1`] = `
 <label
   className="sp-radio__item"
 >
