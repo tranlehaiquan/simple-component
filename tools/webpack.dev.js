@@ -26,7 +26,12 @@ const config = {
             loader: 'babel-loader',
             options: require('../babel.config.js')
           },
-          'eslint-loader'
+          {
+            loader: 'eslint-loader',
+            options: {
+              emitWarning: true
+            }
+          }
         ]
       },
       {
