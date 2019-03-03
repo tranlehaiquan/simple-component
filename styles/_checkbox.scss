@@ -1,0 +1,78 @@
+$radio-icon-d: 14px;
+$radio-icon-checked-d: $radio-icon-d / 2;
+$icon-height: 1em;
+
+.sp-checkbox__group {
+  
+}
+
+.sp-checkbox__item {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  &:not(:first-of-type) {
+    margin-left: 2em;
+  }
+}
+
+.sp-checkbox__item--checked {
+  color: $primary;
+}
+
+.sp-checkbox__icon {
+  vertical-align: middle;
+  position: relative;
+  display: inline-block;
+  margin-right: 0.5em;
+  line-height: $icon-height;
+  width: $icon-height;
+  height: $icon-height;
+  border-radius: 4px;
+  border: 1px solid #bdbdbd;
+  position: relative;
+  &::before {
+    $d: $icon-height * 0.5;
+    $check-border-w: $d / 4;
+    content: "";
+    width: $d;
+    height: $d * 1.4;
+    background-color: transparent;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transition: .3s transform;
+    transform: translate(-50%, -50%) scale(0) rotate(45deg);
+    transform-origin: 50% 50%;
+    border: solid white;
+    border-width: 0 $check-border-w $check-border-w 0;
+  }
+}
+
+.sp-checkbox__text {
+  line-height: 1;
+}
+
+// why style base on :checked?
+// because when js is disabled, 
+// sp-checkbox__item--checked is no longer working
+.sp-checkbox__input {
+  display: none;
+  &:checked {
+    ~ .sp-checkbox__text {
+      color: $primary;
+    }
+
+    ~ .sp-checkbox__icon {
+      background-color: $primary;
+      border-color: $primary;
+      &::before {    
+        transform: translate(-50%, -50%) scale(1) rotate(45deg);
+      }
+    }
+  }
+}
+
+.sp-checkbox__item--disabled {
+  cursor: not-allowed;
+  opacity: 0.2;
+}
