@@ -19,11 +19,11 @@ class Checkbox extends React.Component {
   };
 
   render() {
-    const { children, checked, value, name, disabled } = this.props;
+    const { children, checked, value, name, disabled, className } = this.props;
     const classnameCheckbox = classnames('sp-checkbox__item', {
       ['sp-checkbox__item--checked']: checked,
       ['sp-checkbox__item--disabled']: disabled,
-    });
+    }, className);
 
     return (
       <label className={classnameCheckbox}>
@@ -59,6 +59,7 @@ Checkbox.propTypes = {
   ]),
   name: propTypes.string,
   disabled: propTypes.bool,
+  className: propTypes.string
 };
 
 Checkbox.defaultProps = {

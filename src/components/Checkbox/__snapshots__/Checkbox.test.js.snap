@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot for checkbox Checkbox 1`] = `
+<label
+  className="sp-checkbox__item"
+>
+  <input
+    checked={false}
+    className="sp-checkbox__input"
+    disabled={false}
+    onChange={[Function]}
+    tabIndex="-1"
+    type="checkbox"
+    value="Hi"
+  />
+  <span
+    className="sp-checkbox__icon"
+    onKeyDown={[Function]}
+    tabIndex="0"
+  />
+  <span
+    className="sp-checkbox__text"
+  >
+    Hi
+  </span>
+</label>
+`;
+
+exports[`snapshot for checkbox Checkbox 2`] = `
+<div
+  className="sp-radio__group"
+>
+  <label
+    className="sp-checkbox__item"
+  >
+    <input
+      checked={false}
+      className="sp-checkbox__input"
+      disabled={false}
+      name=""
+      onChange={[Function]}
+      tabIndex="-1"
+      type="checkbox"
+      value="organe"
+    />
+    <span
+      className="sp-checkbox__icon"
+      onKeyDown={[Function]}
+      tabIndex="0"
+    />
+    <span
+      className="sp-checkbox__text"
+    >
+      organe
+    </span>
+  </label>
+  <label
+    className="sp-checkbox__item sp-checkbox__item--checked"
+  >
+    <input
+      checked={true}
+      className="sp-checkbox__input"
+      disabled={false}
+      name=""
+      onChange={[Function]}
+      tabIndex="-1"
+      type="checkbox"
+      value="banana"
+    />
+    <span
+      className="sp-checkbox__icon"
+      onKeyDown={[Function]}
+      tabIndex="0"
+    />
+    <span
+      className="sp-checkbox__text"
+    >
+      banana
+    </span>
+  </label>
+  <label
+    className="sp-checkbox__item"
+  >
+    <input
+      checked={false}
+      className="sp-checkbox__input"
+      disabled={false}
+      name=""
+      onChange={[Function]}
+      tabIndex="-1"
+      type="checkbox"
+      value="coconut"
+    />
+    <span
+      className="sp-checkbox__icon"
+      onKeyDown={[Function]}
+      tabIndex="0"
+    />
+    <span
+      className="sp-checkbox__text"
+    >
+      coconut
+    </span>
+  </label>
+  <label
+    className="sp-checkbox__item sp-checkbox__item--disabled"
+  >
+    <input
+      checked={false}
+      className="sp-checkbox__input"
+      disabled={true}
+      name=""
+      onChange={[Function]}
+      tabIndex="-1"
+      type="checkbox"
+      value="carot"
+    />
+    <span
+      className="sp-checkbox__icon"
+      onKeyDown={[Function]}
+      tabIndex="-1"
+    />
+    <span
+      className="sp-checkbox__text"
+    >
+      carot
+    </span>
+  </label>
+</div>
+`;
