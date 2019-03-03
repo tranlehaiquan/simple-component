@@ -4,6 +4,7 @@ import { hot } from 'react-hot-loader';
 import Radio from './components/Radio/Radio';
 import RadioGroup from './components/Radio/RadioGroup';
 import Checkbox from './components/Checkbox/Checkbox';
+import CheckboxGroup from './components/Checkbox/CheckboxGroup';
 
 class App extends Component {
   state = {
@@ -13,20 +14,41 @@ class App extends Component {
 
   handleOnChange = value => this.setState({ value });
 
-  handleCheckboxChange = value => {};
+  handleCheckboxChange = value => {
+    const { checkboxValue } = this.state;
+
+    if (!checkboxValue.includes(value)) {
+      checkboxValue.push(value);
+      this.setState(({
+        checkboxValue
+      }));
+      return;
+    }
+
+    const indexOfValue = checkboxValue.indexOf(value);
+    checkboxValue.splice(indexOfValue, 1);
+
+    this.setState({
+      checkboxValue
+    });
+  };
 
   render() {
+    const {value, checkboxValue} = this.state;
+
     return (
       <div style={styles.wrapper}>
         <div style={{ padding: '1em' }}>
-          <Checkbox value={1} checked />
-          <Checkbox value={2} />
-          <Checkbox value={3} />
+          <CheckboxGroup onChange={this.handleCheckboxChange} value={checkboxValue}>
+            <Checkbox value={1}/>
+            <Checkbox value={2}/>
+            <Checkbox value={3}/>
+          </CheckboxGroup>
         </div>
         <div style={{ padding: '1em' }}>
           <RadioGroup
             name="hello"
-            value={this.state.value}
+            value={value}
             onChange={this.handleOnChange}
           >
             <Radio value="1">Option 1</Radio>
