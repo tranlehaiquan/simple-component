@@ -12,7 +12,8 @@ class CheckboxGroup extends Component {
     const {
       children,
       value,
-      name
+      name,
+      required
     } = this.props;
 
     const radios = React.Children.map(children, (radio) => {
@@ -22,7 +23,8 @@ class CheckboxGroup extends Component {
         radio, {
           checked,
           onChange: this.handleOnClick,
-          name
+          name,
+          required
         }
       );
     });
@@ -46,11 +48,13 @@ CheckboxGroup.propTypes = {
   value: propTypes.array,
   name: propTypes.string,
   onChange: propTypes.func,
+  required: propTypes.bool
 };
 
 CheckboxGroup.defaultProps = {
   name: '',
-  value: []
+  value: [],
+  required: false
 };
 
 export default CheckboxGroup;

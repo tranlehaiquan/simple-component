@@ -19,7 +19,7 @@ class Checkbox extends React.Component {
   };
 
   render() {
-    const { children, checked, value, name, disabled, className } = this.props;
+    const { children, checked, value, name, disabled, className, required } = this.props;
     const classnameCheckbox = classnames('sp-checkbox__item', {
       ['sp-checkbox__item--checked']: checked,
       ['sp-checkbox__item--disabled']: disabled,
@@ -36,6 +36,7 @@ class Checkbox extends React.Component {
           checked={checked}
           onChange={this.handleOnChange}
           disabled={disabled}
+          required={required}
         />
         <span
           className="sp-checkbox__icon"
@@ -59,12 +60,14 @@ Checkbox.propTypes = {
   ]),
   name: propTypes.string,
   disabled: propTypes.bool,
-  className: propTypes.string
+  className: propTypes.string,
+  required: propTypes.bool
 };
 
 Checkbox.defaultProps = {
   checked: false,
   disabled: false,
+  required: false
 };
 
 export default Checkbox;

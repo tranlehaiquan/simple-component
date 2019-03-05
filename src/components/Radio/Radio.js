@@ -19,7 +19,7 @@ class Radio extends Component {
   }
 
   render() {
-    const { children, checked, value, name, disabled } = this.props;
+    const { children, checked, value, name, disabled, required } = this.props;
     const classnameRadio = classnames('sp-radio__item', {
       ['sp-radio__item--checked']: checked,
       ['sp-radio__item--disabled']: disabled,
@@ -36,6 +36,7 @@ class Radio extends Component {
           checked={checked}
           onChange={this.handleOnChange}
           disabled={disabled}
+          required={required}
         />
         <span
           className="sp-radio__icon"
@@ -59,11 +60,13 @@ Radio.propTypes = {
   ]),
   name: propTypes.string,
   disabled: propTypes.bool,
+  required: propTypes.bool
 };
 
 Radio.defaultProps = {
   checked: false,
   disabled: false,
+  required: false
 };
 
 export default Radio;
