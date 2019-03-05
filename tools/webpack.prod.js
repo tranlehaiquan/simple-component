@@ -6,6 +6,7 @@
 const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = function (env = {}, agr) {
   const config = {
@@ -24,18 +25,31 @@ module.exports = function (env = {}, agr) {
           loader: "babel-loader",
           options: require('../babel.config.js')
         }
-      }]
+      },
+      {
+        test: /\.(scss)$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
+        ]
+      }
+    ]
     },
     // finally we pass it an array of our plugins
     plugins: [
       new CleanWebpackPlugin("dist", {
         root: path.resolve(__dirname, '..')
+      }),
+      new MiniCssExtractPlugin({
+        filename: '[name].css',
+        chunkFilename: '[id].css',
       })
     ]
   }
 
   if (!env.isPublish) {
-    // config.plugins.push(new BundleAnalyzerPlugin());
+    config.plugins.push(new BundleAnalyzerPlugin());
   }
 
   return config;
