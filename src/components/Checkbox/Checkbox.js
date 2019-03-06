@@ -3,10 +3,10 @@ import classnames from 'classnames';
 import propTypes from 'prop-types';
 
 class Checkbox extends React.Component {
-  handleOnChange = () => {
+  handleOnChange = (event) => {
     const { onChange, value } = this.props;
 
-    onChange(value);
+    onChange(value, event);
   };
 
   handleKeyPress = e => {
@@ -57,7 +57,7 @@ Checkbox.propTypes = {
     propTypes.number,
     propTypes.string,
     propTypes.bool,
-  ]),
+  ]).isRequired,
   name: propTypes.string,
   disabled: propTypes.bool,
   className: propTypes.string,
@@ -67,7 +67,9 @@ Checkbox.propTypes = {
 Checkbox.defaultProps = {
   checked: false,
   disabled: false,
-  required: false
+  required: false,
+  name: '',
+  className: ''
 };
 
 export default Checkbox;

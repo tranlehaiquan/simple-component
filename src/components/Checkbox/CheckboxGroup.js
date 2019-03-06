@@ -4,8 +4,8 @@ import React, {
 import propTypes from 'prop-types';
 
 class CheckboxGroup extends Component {
-  handleOnClick = (value) => {
-    this.props.onChange(value);
+  handleOnClick = (value, event) => {
+    this.props.onChange(value, event);
   }
 
   renderChildrent = () => {
@@ -13,18 +13,19 @@ class CheckboxGroup extends Component {
       children,
       value,
       name,
-      required
+      disabled
     } = this.props;
 
     const radios = React.Children.map(children, (radio) => {
       const checked = value.includes(radio.props.value);
+      const radioDisabled = radio.props.disabled;
 
       return React.cloneElement(
         radio, {
           checked,
           onChange: this.handleOnClick,
           name,
-          required
+          disabled: disabled || radioDisabled
         }
       );
     });
@@ -48,13 +49,13 @@ CheckboxGroup.propTypes = {
   value: propTypes.array,
   name: propTypes.string,
   onChange: propTypes.func,
-  required: propTypes.bool
+  disabled: propTypes.bool
 };
 
 CheckboxGroup.defaultProps = {
-  name: '',
   value: [],
-  required: false
+  name: '',
+  disabled: false
 };
 
 export default CheckboxGroup;

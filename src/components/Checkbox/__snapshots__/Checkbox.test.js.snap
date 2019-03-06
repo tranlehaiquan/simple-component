@@ -8,6 +8,7 @@ exports[`snapshot for checkbox Checkbox 1`] = `
     checked={false}
     className="sp-checkbox__input"
     disabled={false}
+    name=""
     onChange={[Function]}
     required={false}
     tabIndex="-1"

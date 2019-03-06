@@ -14,7 +14,7 @@ class App extends Component {
 
   handleOnChange = value => this.setState({ value });
 
-  handleCheckboxChange = value => {
+  handleCheckboxChange = (value) => {
     const { checkboxValue } = this.state;
 
     if (!checkboxValue.includes(value)) {
