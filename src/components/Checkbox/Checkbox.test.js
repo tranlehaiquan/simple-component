@@ -1,26 +1,18 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import renderer from 'react-test-renderer';
 import Checkbox from './Checkbox';
-import CheckboxGroup from './CheckboxGroup';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import sinon from 'sinon';
 
 describe('snapshot for checkbox', () => {
   test('Checkbox', () => {
-    const component = renderer.create(<Checkbox value="Hi" onChange={() => {}}/>);
-
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  test('Checkbox', () => {
     const component = renderer.create(
-      <CheckboxGroup value={['banana']} onChange={() => {}}>
-        <Checkbox value="organe"/>
-        <Checkbox value="banana"/>
-        <Checkbox value="coconut"/>
-        <Checkbox value="carot" disabled/>
-      </CheckboxGroup>
+      <div>
+        <Checkbox value="organe" name="vegetable" checked={true} onChange={() => {}}/>
+        <Checkbox value="banana" name="vegetable" checked={false} disabled onChange={() => {}}/>
+        <Checkbox value="coconut" name="vegetable" checked={false} required onChange={() => {}}/>
+        <Checkbox value="coconut" name="vegetable" checked={false} onChange={() => {}} className="sp-last"/>
+      </div>
     );
 
     let tree = component.toJSON();
