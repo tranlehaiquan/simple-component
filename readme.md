@@ -1,5 +1,7 @@
 # Simple Component
 
+This project huge inspice by Element Vue (React)
+
 ## Install
 
 `npm install simple-components-react`
@@ -11,8 +13,8 @@ Project Reactjs Component. Go from scratch /skrætʃ/.
   - [x] Publish project to NPM (Defined which one will be install)
   - [x] Step up eslint.
   - [ ] Step up new docs with seperate page for component
-  - [ ] Step up test
-  - [ ] Step up CI/CD
+  - [x] Step up test
+  - [ ] Step up CI/CDs
   - [ ] Step up precommit? (Optional)
 
 ## Test
