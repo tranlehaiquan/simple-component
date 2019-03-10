@@ -3,10 +3,10 @@ import propTypes from 'prop-types';
 import classnames from 'classnames';
 
 class Radio extends Component {
-  handleOnChange = () => {
+  handleOnChange = (e) => {
     const { onChange, value } = this.props;
 
-    onChange(value);
+    onChange(value, e);
   }
 
   handleKeyPress = e => {

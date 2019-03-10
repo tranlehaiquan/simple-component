@@ -1,0 +1,329 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render RadioGroup 1`] = `
+<div
+  className="sp-radio__group"
+>
+  <label
+    className="sp-radio__item sp-radio__item--checked"
+  >
+    <input
+      checked={true}
+      className="sp-radio__input"
+      disabled={false}
+      name="opitons"
+      onChange={[Function]}
+      required={false}
+      tabIndex="-1"
+      type="radio"
+      value="1"
+    />
+    <span
+      className="sp-radio__icon"
+      onKeyDown={[Function]}
+      tabIndex="0"
+    />
+    <span
+      className="sp-radio__text"
+    >
+      Option 1
+    </span>
+  </label>
+  <label
+    className="sp-radio__item sp-radio__item--disabled"
+  >
+    <input
+      checked={false}
+      className="sp-radio__input"
+      disabled={true}
+      name="opitons"
+      onChange={[Function]}
+      required={false}
+      tabIndex="-1"
+      type="radio"
+      value="2"
+    />
+    <span
+      className="sp-radio__icon"
+      onKeyDown={[Function]}
+      tabIndex="-1"
+    />
+    <span
+      className="sp-radio__text"
+    >
+      Option 2
+    </span>
+  </label>
+  <label
+    className="sp-radio__item"
+  >
+    <input
+      checked={false}
+      className="sp-radio__input"
+      disabled={false}
+      name="opitons"
+      onChange={[Function]}
+      required={false}
+      tabIndex="-1"
+      type="radio"
+      value="3"
+    />
+    <span
+      className="sp-radio__icon"
+      onKeyDown={[Function]}
+      tabIndex="0"
+    />
+    <span
+      className="sp-radio__text"
+    >
+      Option 3
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Render RadioGroup required 1`] = `
+<div
+  className="sp-radio__group"
+>
+  <label
+    className="sp-radio__item sp-radio__item--checked"
+  >
+    <input
+      checked={true}
+      className="sp-radio__input"
+      disabled={false}
+      name="opitons"
+      onChange={[Function]}
+      required={false}
+      tabIndex="-1"
+      type="radio"
+      value="1"
+    />
+    <span
+      className="sp-radio__icon"
+      onKeyDown={[Function]}
+      tabIndex="0"
+    />
+    <span
+      className="sp-radio__text"
+    >
+      Option 1
+    </span>
+  </label>
+  <label
+    className="sp-radio__item"
+  >
+    <input
+      checked={false}
+      className="sp-radio__input"
+      disabled={false}
+      name="opitons"
+      onChange={[Function]}
+      required={false}
+      tabIndex="-1"
+      type="radio"
+      value="2"
+    />
+    <span
+      className="sp-radio__icon"
+      onKeyDown={[Function]}
+      tabIndex="0"
+    />
+    <span
+      className="sp-radio__text"
+    >
+      Option 2
+    </span>
+  </label>
+  <label
+    className="sp-radio__item"
+  >
+    <input
+      checked={false}
+      className="sp-radio__input"
+      disabled={false}
+      name="opitons"
+      onChange={[Function]}
+      required={false}
+      tabIndex="-1"
+      type="radio"
+      value="3"
+    />
+    <span
+      className="sp-radio__icon"
+      onKeyDown={[Function]}
+      tabIndex="0"
+    />
+    <span
+      className="sp-radio__text"
+    >
+      Option 3
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Render RadioGroup required 2`] = `
+<div
+  className="sp-radio__group"
+>
+  <label
+    className="sp-radio__item sp-radio__item--checked"
+  >
+    <input
+      checked={true}
+      className="sp-radio__input"
+      disabled={false}
+      name="opitons"
+      onChange={[Function]}
+      required={false}
+      tabIndex="-1"
+      type="radio"
+      value="1"
+    />
+    <span
+      className="sp-radio__icon"
+      onKeyDown={[Function]}
+      tabIndex="0"
+    />
+    <span
+      className="sp-radio__text"
+    >
+      Option 1
+    </span>
+  </label>
+  <label
+    className="sp-radio__item"
+  >
+    <input
+      checked={false}
+      className="sp-radio__input"
+      disabled={false}
+      name="opitons"
+      onChange={[Function]}
+      required={false}
+      tabIndex="-1"
+      type="radio"
+      value="2"
+    />
+    <span
+      className="sp-radio__icon"
+      onKeyDown={[Function]}
+      tabIndex="0"
+    />
+    <span
+      className="sp-radio__text"
+    >
+      Option 2
+    </span>
+  </label>
+  <label
+    className="sp-radio__item"
+  >
+    <input
+      checked={false}
+      className="sp-radio__input"
+      disabled={false}
+      name="opitons"
+      onChange={[Function]}
+      required={false}
+      tabIndex="-1"
+      type="radio"
+      value="3"
+    />
+    <span
+      className="sp-radio__icon"
+      onKeyDown={[Function]}
+      tabIndex="0"
+    />
+    <span
+      className="sp-radio__text"
+    >
+      Option 3
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Render RadioGroup, disabled 1`] = `
+<div
+  className="sp-radio__group"
+>
+  <label
+    className="sp-radio__item sp-radio__item--checked"
+  >
+    <input
+      checked={true}
+      className="sp-radio__input"
+      disabled={false}
+      name="opitons"
+      onChange={[Function]}
+      required={false}
+      tabIndex="-1"
+      type="radio"
+      value="1"
+    />
+    <span
+      className="sp-radio__icon"
+      onKeyDown={[Function]}
+      tabIndex="0"
+    />
+    <span
+      className="sp-radio__text"
+    >
+      Option 1
+    </span>
+  </label>
+  <label
+    className="sp-radio__item"
+  >
+    <input
+      checked={false}
+      className="sp-radio__input"
+      disabled={false}
+      name="opitons"
+      onChange={[Function]}
+      required={false}
+      tabIndex="-1"
+      type="radio"
+      value="2"
+    />
+    <span
+      className="sp-radio__icon"
+      onKeyDown={[Function]}
+      tabIndex="0"
+    />
+    <span
+      className="sp-radio__text"
+    >
+      Option 2
+    </span>
+  </label>
+  <label
+    className="sp-radio__item"
+  >
+    <input
+      checked={false}
+      className="sp-radio__input"
+      disabled={false}
+      name="opitons"
+      onChange={[Function]}
+      required={false}
+      tabIndex="-1"
+      type="radio"
+      value="3"
+    />
+    <span
+      className="sp-radio__icon"
+      onKeyDown={[Function]}
+      tabIndex="0"
+    />
+    <span
+      className="sp-radio__text"
+    >
+      Option 3
+    </span>
+  </label>
+</div>
+`;

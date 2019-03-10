@@ -50,13 +50,15 @@ RadioGroup.propTypes = {
   ]),
   name: propTypes.string,
   onChange: propTypes.func,
-  required: propTypes.bool
+  required: propTypes.bool,
+  disabled: propTypes.bool
 };
 
 RadioGroup.defaultProps = {
   name: '',
   value: '',
-  required: false
+  required: false,
+  disabled: false
 };
 
 export default RadioGroup;
