@@ -6,7 +6,7 @@ module.exports = {
       ],
       plugins: [
         "react-hot-loader/babel",
-        "@babel/plugin-proposal-class-properties", 
+        "@babel/plugin-proposal-class-properties",
       ]
     },
     test: {
@@ -14,7 +14,8 @@ module.exports = {
         "@babel/preset-env", "@babel/preset-react"
       ],
       plugins: [
-        "@babel/plugin-proposal-class-properties"
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-runtime"
       ]
     },
     production: {
@@ -22,7 +23,8 @@ module.exports = {
         "@babel/preset-env", "@babel/preset-react"
       ],
       plugins: [
-        "@babel/plugin-proposal-class-properties", 
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-runtime"
       ]
     }
   }

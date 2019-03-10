@@ -23,7 +23,10 @@ module.exports = function (env = {}, agr) {
         exclude: /(node_modules|bower_components|build)/,
         use: {
           loader: "babel-loader",
-          options: require('../babel.config.js')
+          options: {
+            envName: 'production',
+            ...require('../babel.config.js')
+          }
         }
       },
       {
