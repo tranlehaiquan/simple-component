@@ -6,8 +6,8 @@ Checkbox element can be use with or without CheckboxGroup
 
 ### Todo
 
-- Add indeterminate for checkbox
-- Add min/ max for checkboxGroup
+- [x] Add indeterminate `/ˌɪn.dɪˈtɝː.mɪ.nət/` for checkbox
+- [ ] Add min/ max for checkboxGroup
 
 ### Basic usage
 
@@ -59,16 +59,17 @@ Usage for disable all checkbox inside
 
 ### Checkbox attribute
 
-| Prop      | Description                | Type                  | Options | Default |
-|-----------|----------------------------|-----------------------|---------|---------|
-| children  | Enable user custom present | Node                  |         |         |
-| checked   | Whether checked or not     | Boolean               |         | false   |
-| onChange  | Event on change            | Function              |         |         |
-| value     |                            | Number/String/Boolean |         |         |
-| name      |                            | String                |         | ''      |
-| disabled  |                            | Boolean               |         | false   |
-| className |                            | String                |         | ''      |
-| required  |                            | Boolean               |         | false   |
+| Prop           | Description                | Type                  | Options | Default |
+|----------------|----------------------------|-----------------------|---------|---------|
+| children       | Enable user custom present | Node                  |         |         |
+| checked        | Whether checked or not     | Boolean               |         | false   |
+| onChange       | Event on change            | Function              |         |         |
+| value          |                            | Number/String/Boolean |         |         |
+| name           |                            | String                |         | ''      |
+| disabled       |                            | Boolean               |         | false   |
+| className      |                            | String                |         | ''      |
+| required       |                            | Boolean               |         | false   |
+| indeterminate  |                            | Boolean               |         | false   |
 
 ### CheckboxGroup attribute
 

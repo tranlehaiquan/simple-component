@@ -6,39 +6,59 @@ import RadioGroup from './components/Radio/RadioGroup';
 import Checkbox from './components/Checkbox/Checkbox';
 import CheckboxGroup from './components/Checkbox/CheckboxGroup';
 
+const options = [1, 2, 3];
+
 class App extends Component {
   state = {
     value: 1,
-    checkboxValue: [1]
+    checkboxValue: [1],
+    indeterminate: true,
+    checkboxCheckedAll: false
   };
 
   handleOnChange = value => this.setState({ value });
 
-  handleCheckboxChange = (value) => {
+  handleCheckboxChange = (value, { target }) => {
     const { checkboxValue } = this.state;
 
-    if (!checkboxValue.includes(value)) {
+    if (target.checked) {
       checkboxValue.push(value);
-      this.setState(({
-        checkboxValue
-      }));
-      return;
+    } else {
+      const indexOfValue = checkboxValue.indexOf(value);
+      checkboxValue.splice(indexOfValue, 1);
     }
 
-    const indexOfValue = checkboxValue.indexOf(value);
-    checkboxValue.splice(indexOfValue, 1);
-
     this.setState({
-      checkboxValue
+      checkboxValue,
+      indeterminate: checkboxValue.length > 0 && checkboxValue.length < options.length,
+      checkboxCheckedAll: checkboxValue.length === options.length
     });
   };
 
+  handleCheckAllCheckbox = (value, event) => {
+    const checkboxValue = event.target.checked ? [1, 2, 3] : [];
+
+    this.setState({
+      checkboxCheckedAll: event.target.checked,
+      checkboxValue,
+      indeterminate: false
+    });
+  }
+
   render() {
-    const {value, checkboxValue} = this.state;
+    const {value, checkboxValue, indeterminate, checkboxCheckedAll} = this.state;
 
     return (
       <div style={styles.wrapper}>
         <div style={{ padding: '1em' }}>
+          <Checkbox 
+            indeterminate={indeterminate}
+            onChange={this.handleCheckAllCheckbox}
+            checked={checkboxCheckedAll}
+          >
+            Check all
+          </Checkbox>
+
           <CheckboxGroup onChange={this.handleCheckboxChange} value={checkboxValue}>
             <Checkbox value={1}/>
             <Checkbox value={2}/>

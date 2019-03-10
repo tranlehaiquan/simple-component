@@ -31,20 +31,41 @@ $icon-height: 1em;
   border: 1px solid #bdbdbd;
   position: relative;
   &::before {
-    $d: $icon-height * 0.5;
-    $check-border-w: $d / 4;
+    $width: $icon-height * 0.4;
+    $check-border-w: 2px;
     content: "";
-    width: $d;
-    height: $d * 1.4;
+    width: $width;
+    height: $width * 1.4;
     background-color: transparent;
     position: absolute;
     top: 40%;
     left: 50%;
-    transition: .3s transform;
+    transition: .2s transform;
     transform: translate(-50%, -50%) scale(0) rotate(45deg);
     transform-origin: 50% 50%;
     border: solid white;
     border-width: 0 $check-border-w $check-border-w 0;
+  }
+}
+
+.sp-checkbox__item--indeterminate {
+  .sp-checkbox__icon {
+    background-color: $primary;
+    &::after {
+      $width: $icon-height * 0.5;
+      $height: $icon-height * 0.2;
+      content: "";
+      width: $width;
+      height: $height;
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: initial;
+      transform: translate(-50%, -50%) scale(1);
+      transform-origin: 50% 50%;
+      border: none;
+    }
   }
 }
 
