@@ -5,15 +5,17 @@ import Radio from './components/Radio/Radio';
 import RadioGroup from './components/Radio/RadioGroup';
 import Checkbox from './components/Checkbox/Checkbox';
 import CheckboxGroup from './components/Checkbox/CheckboxGroup';
+import Toast from './components/Message/Toast';
 
 const options = [1, 2, 3];
 
 class App extends Component {
   state = {
-    value: 1,
+    value: '1',
     checkboxValue: [1],
     indeterminate: true,
-    checkboxCheckedAll: false
+    checkboxCheckedAll: false,
+    show: true
   };
 
   handleOnChange = value => this.setState({ value });
@@ -46,10 +48,14 @@ class App extends Component {
   }
 
   render() {
-    const {value, checkboxValue, indeterminate, checkboxCheckedAll} = this.state;
+    const {value, checkboxValue, indeterminate, checkboxCheckedAll, show} = this.state;
 
     return (
       <div style={styles.wrapper}>
+        <div style={{ padding: '1em' }}>
+          <Toast message="Hello the world???" show={show} type="warning"/>
+          <button onClick={() => {this.setState({show: !show});}}>Toggle</button>
+        </div>
         <div style={{ padding: '1em' }}>
           <Checkbox 
             indeterminate={indeterminate}
