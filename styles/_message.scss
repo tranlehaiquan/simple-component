@@ -1,0 +1,63 @@
+// Include message, toasts
+
+$toast-default-round: 6px;
+$toast-p-x: 1.3em;
+$toast-p-y: 0.7em;
+$toast-min-w: 300px;
+
+.p-message {
+}
+
+.p-toast {
+  @include toast-variant($gray-200);
+  padding: $toast-p-y $toast-p-x;
+  border-radius: $toast-default-round;
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid;
+  min-width: $toast-min-w;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-toast__close {
+  cursor: pointer;
+  padding: 0.5em;
+  margin-right: -0.5em;
+  color: transparentize($gray-600, 0.5);
+  transition: .2s color;
+  &:hover {
+    color: $gray-600;
+  }
+}
+
+.p-toast__description {
+  margin: 0;
+}
+
+@each $color, $value in $theme-color {
+  .p-toast--#{$color} {
+    @include toast-variant($value);
+  }
+}
+
+// Transition CSS parse
+.toast-enter {
+  opacity: 0.3;
+  transform: translateY(-30px) translateX(-50%);
+}
+
+.toast-enter-active {
+  opacity: 1;
+  transform: translateY(0px) translateX(-50%);
+  transition: all 300ms ease-out;
+}
+
+.toast-exit-active {
+  opacity: 0.1;
+  transform: translateY(-30px) translateX(-50%);
+  transition: all 300ms ease-out;
+}

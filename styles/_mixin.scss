@@ -19,3 +19,9 @@
     color: transparentize($color, 0.5);
   }
 }
+
+@mixin toast-variant($color) {
+  background-color: transparentize($color, 0.8);
+  border-color: transparentize($color, 0.6);
+  color: $color;
+}
