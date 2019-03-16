@@ -52,3 +52,11 @@ For detail go google search : ).
     ├── webpack.dev.js
     └── webpack.build.js
 ```
+
+## Questions
+
+- How to make own icon and use it? (Font icon/ SVG)
+
+### Add icon fontawesome
+
+Becasue fontawesome package give us more icon than need -> Increase size of package with icon never use, so i deceive /di'si:v/ make my own icon component with Icomoon.
