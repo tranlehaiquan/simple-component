@@ -57,7 +57,7 @@ class App extends Component {
           <Icon name="info" /> Hello
         </p>
         <div style={{ padding: '1em' }}>
-          <Toast message="Hello the world???" show={show} type="warning"/>
+          <Toast message="Hello the world???" show={show} type="success"/>
           <button onClick={() => {this.setState({show: !show});}}>Toggle</button>
         </div>
         <div style={{ padding: '1em' }}>

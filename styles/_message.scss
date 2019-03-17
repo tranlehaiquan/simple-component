@@ -28,9 +28,11 @@ $toast-min-w: 300px;
   padding: 0.5em;
   margin-right: -0.5em;
   color: transparentize($gray-600, 0.5);
-  transition: .2s color;
+  fill: transparentize($gray-600, 0.5);
+  transition: .2s color, .2s fill;
   &:hover {
     color: $gray-600;
+    fill: $gray-600;
   }
 }
 
@@ -38,9 +40,18 @@ $toast-min-w: 300px;
   margin: 0;
 }
 
+.p-toast__icon {
+  display: inline-block;
+  margin-right: 0.3em;
+}
+
 @each $color, $value in $theme-color {
   .p-toast--#{$color} {
     @include toast-variant($value);
+  }
+
+  .p-toast__icon--#{$color} {
+    fill: $value;
   }
 }
 

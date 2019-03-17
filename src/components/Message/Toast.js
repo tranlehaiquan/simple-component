@@ -2,6 +2,7 @@ import React from 'react';
 import { CSSTransition } from 'react-transition-group';
 import propTypes from 'prop-types';
 import classnames from 'classnames';
+import Icon from '../Icon/Icon';
 
 function Toast(props) {
   const { message, type, show, customClass } = props;
@@ -16,16 +17,30 @@ function Toast(props) {
     >
       {() => (
         <div className={toastClassName}>
-          <p className="p-toast__description">{ message }</p>
-          <span className="p-toast__close">x</span>
+          <p className="p-toast__description">
+            {type &&
+              <Icon name={typeIcons[type]} className={`p-toast__icon p-toast__icon--${type}`}/>
+            }
+            { message }
+          </p>
+          <span className="p-toast__close">
+            <Icon name="CLOSE" />
+          </span>
         </div>
       )}
     </CSSTransition>
   );
 }
 
+const typeIcons = {
+  'success': 'CHECKED',
+  'warning': 'INFO',
+  'info': 'INFO',
+  'danger': 'CANCEL'
+};
+
 Toast.propTypes = {
-  type: propTypes.oneOf(['primary', 'success', 'info', 'warning', 'danger']),
+  type: propTypes.oneOf(['success', 'info', 'warning', 'danger']),
   message: propTypes.string,
   show: propTypes.bool,
   customClass: propTypes.string,

@@ -1,25 +1,19 @@
 import React from 'react';
-import { icons } from './selection.json';
+import ICON from './selection.json';
 import propTypes from 'prop-types';
-
-function getPath(name) {
-  const icon = icons.find((icon) => {
-    return icon.properties.name === name;
-  });
-
-  if (icon) {
-    return icon.icon.paths.join(' ');
-  } else {
-    return '';
-  }
-}
+import classnames from 'classnames';
 
 function Icon(props) {
-  const { width, height, name } = props;
-  const iconPath = getPath(name);
+  const { width, height, name, className } = props;
+  const iconPath = ICON[name];
 
   return (
-    <svg width={width} height={height} viewBox="0 0 1024 1024" className="sp-icon">
+    <svg 
+      width={width} 
+      height={height} 
+      viewBox="0 0 1024 1024" 
+      className={classnames('sp-icon', className)}
+    >
       <path d={iconPath}></path>
     </svg>
   );
@@ -30,14 +24,16 @@ Icon.propTypes = {
   height: propTypes.number,
   tilte: propTypes.string,
   description: propTypes.string,
-  name: propTypes.string.isRequired
+  name: propTypes.string.isRequired,
+  className: propTypes.string
 };
 
 Icon.defaultProps = {
   width: 22,
   height: 22,
   tilte: '',
-  description: ''
+  description: '',
+  className: ''
 };
 
 export default Icon;
