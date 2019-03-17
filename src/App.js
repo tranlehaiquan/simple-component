@@ -5,7 +5,6 @@ import Radio from './components/Radio/Radio';
 import RadioGroup from './components/Radio/RadioGroup';
 import Checkbox from './components/Checkbox/Checkbox';
 import CheckboxGroup from './components/Checkbox/CheckboxGroup';
-import Icon from './components/Icon/Icon';
 import Toast from './components/Message/Toast';
 
 const options = [1, 2, 3];
@@ -53,11 +52,16 @@ class App extends Component {
 
     return (
       <div style={styles.wrapper}>
-        <p>
-          <Icon name="info" /> Hello
-        </p>
         <div style={{ padding: '1em' }}>
-          <Toast message="Hello the world???" show={show} type="success"/>
+          <Toast 
+            message="Hello the world???" 
+            show={show} 
+            type="success"
+            close={() => {
+              this.setState({show: false});
+            }}
+            duration={1500}
+          />
           <button onClick={() => {this.setState({show: !show});}}>Toggle</button>
         </div>
         <div style={{ padding: '1em' }}>
