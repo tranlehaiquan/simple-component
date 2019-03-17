@@ -59,4 +59,4 @@ For detail go google search : ).
 
 ### Add icon fontawesome
 
-Becasue fontawesome package give us more icon than need -> Increase size of package with icon never use, so i deceive /di'si:v/ make my own icon component with Icomoon.
+Becasue fontawesome package give us more icon than need -> Increase size of package with icon never use, so i decided /dI'saI.dId/ make my own icon component with Icomoon.
