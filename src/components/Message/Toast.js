@@ -14,7 +14,7 @@ function Toast(props) {
   };
 
   const setTimer = () => {
-    if(duration) {
+    if(duration && close) {
       timer = setTimeout(close, duration);
     }
   };
@@ -36,6 +36,7 @@ function Toast(props) {
       classNames="toast"
       onEntered={setTimer}
       onExit={clearTimer}
+      appear
     >
       {() => (
         <div className={toastClassName} onMouseEnter={clearTimer} onMouseLeave={setTimer} >
