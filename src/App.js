@@ -56,7 +56,6 @@ class App extends Component {
           <Toast 
             message="Hello the world???" 
             show={show} 
-            type="success"
             close={() => {
               this.setState({show: false});
             }}

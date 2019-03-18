@@ -2,10 +2,12 @@ import React, { useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import propTypes from 'prop-types';
 import classnames from 'classnames';
+import noop from 'lodash/noop';
+
 import Icon from '../Icon/Icon';
 
 function Toast(props) {
-  const { message, type, show, customClass, close, duration } = props;
+  const { message, type, show, customClass, close, duration, onClose } = props;
   const toastClassName = classnames('p-toast', type && `p-toast--${type}`, customClass);
   let timer;
 
@@ -36,6 +38,7 @@ function Toast(props) {
       classNames="toast"
       onEntered={setTimer}
       onExit={clearTimer}
+      onExited={onClose}
     >
       {() => (
         <div className={toastClassName} onMouseEnter={clearTimer} onMouseLeave={setTimer} >
@@ -69,13 +72,28 @@ Toast.propTypes = {
   show: propTypes.bool,
   customClass: propTypes.string,
   close: propTypes.func,
-  duration: propTypes.number
+  duration: function(props, propName, componentName) {
+    if(!props[propName]) return;
+    const typeOfProp = typeof props[propName];
+    if(typeOfProp !== 'number') {
+      return new Error(
+        `Failed prop type: Invalid prop duration of type ${typeOfProp} supplied to ${componentName}, expected number.`);
+    }
+
+    if(!props.close) {
+      // eslint-disable-next-line
+      console.warn(`Please supplie close method with duration prop to ${componentName}`);
+    }
+  },
+  onClose: propTypes.func
 };
 
 Toast.defaultProps = {
+  type: 'info',
   message: '',
   show: false,
   customClass: '',
+  onClose: noop
 };
 
 export default Toast;
