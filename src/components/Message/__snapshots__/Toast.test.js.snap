@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render snapshot Toast 1`] = `
+<div
+  className="p-toast p-toast--success"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <p
+    className="p-toast__description"
+  >
+    <svg
+      className="sp-icon p-toast__icon p-toast__icon--success"
+      height={22}
+      viewBox="0 0 1024 1024"
+      width={22}
+    >
+      <path
+        d="M426 726l384-384-60-62-324 324-152-152-60 60zM512 86c236 0 426 190 426 426s-190 426-426 426-426-190-426-426 190-426 426-426z"
+      />
+    </svg>
+    Hello the world???
+  </p>
+  <span
+    className="p-toast__close"
+    onClick={[Function]}
+  >
+    <svg
+      className="sp-icon"
+      height={22}
+      viewBox="0 0 1024 1024"
+      width={22}
+    >
+      <path
+        d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+      />
+    </svg>
+  </span>
+</div>
+`;
