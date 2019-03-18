@@ -36,7 +36,6 @@ function Toast(props) {
       classNames="toast"
       onEntered={setTimer}
       onExit={clearTimer}
-      appear
     >
       {() => (
         <div className={toastClassName} onMouseEnter={clearTimer} onMouseLeave={setTimer} >
