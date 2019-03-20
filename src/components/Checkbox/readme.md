@@ -51,6 +51,18 @@ Usage for disable all checkbox inside
   </CheckboxGroup>
 ```
 
+### Min/Max
+
+Usage for disable all checkbox inside
+
+```Javascript
+  <CheckboxGroup min={1} max={2} value="organe" onChange={onChange} disabled>
+    <Checkbox value="organe" />
+    <Checkbox value="banana" />
+    <Checkbox value="coconut" />
+  </CheckboxGroup>
+```
+
 ### Checkbox event
 
 | Event Name | Description                                    | Parameters   |
@@ -77,7 +89,9 @@ Usage for disable all checkbox inside
 |-----------|-----------------------------------------|-----------------------|---------|---------|
 | children  | Checkbox components                     | Node                  |         |         |
 | onChange  | Event on change                         | Function              |         |         |
-| value     | For current value, not Checkbox itselft | Number/String/Boolean |         |         |
+| values    | For current value, not Checkbox itselft | Array                 |         |         |
 | name      |                                         | String                |         | ''      |
 | disabled  |                                         | Boolean               |         | false   |
 | className |                                         | String                |         | ''      |
+| min       |                                         | Number                |         |         |
+| max       |                                         | Number                |         |         |

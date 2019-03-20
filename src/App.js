@@ -72,10 +72,16 @@ class App extends Component {
             Check all
           </Checkbox>
 
-          <CheckboxGroup onChange={this.handleCheckboxChange} value={checkboxValue}>
+          <CheckboxGroup
+            min={1}
+            onChange={this.handleCheckboxChange} 
+            values={checkboxValue}
+          >
             <Checkbox value={1}/>
             <Checkbox value={2}/>
             <Checkbox value={3}/>
+            <Checkbox value={4}/>
+            <Checkbox value={5}/>
           </CheckboxGroup>
         </div>
         <div style={{ padding: '1em' }}>

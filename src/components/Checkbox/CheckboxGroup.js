@@ -5,19 +5,25 @@ import propTypes from 'prop-types';
 
 class CheckboxGroup extends Component {
   handleOnClick = (value, event) => {
+    const { min, max, values } = this.props;
+    const isChecked = event.target.checked;
+
+    if(!isChecked && values.length <= min) return;
+    if(isChecked && values.length >= max) return;
+
     this.props.onChange(value, event);
   }
 
   renderChildrent = () => {
     const {
       children,
-      value,
+      values,
       name,
       disabled
     } = this.props;
 
     const radios = React.Children.map(children, (radio) => {
-      const checked = value.includes(radio.props.value);
+      const checked = values.includes(radio.props.value);
       const radioDisabled = radio.props.disabled;
 
       return React.cloneElement(
@@ -46,14 +52,16 @@ class CheckboxGroup extends Component {
 
 CheckboxGroup.propTypes = {
   children: propTypes.node,
-  value: propTypes.array,
+  values: propTypes.array,
   name: propTypes.string,
   onChange: propTypes.func,
-  disabled: propTypes.bool
+  disabled: propTypes.bool,
+  min: propTypes.number,
+  max: propTypes.number
 };
 
 CheckboxGroup.defaultProps = {
-  value: [],
+  values: [],
   name: '',
   disabled: false
 };
