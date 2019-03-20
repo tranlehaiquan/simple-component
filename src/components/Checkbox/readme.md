@@ -7,7 +7,7 @@ Checkbox element can be use with or without CheckboxGroup
 ### Todo
 
 - [x] Add indeterminate `/ˌɪn.dɪˈtɝː.mɪ.nət/` for checkbox
-- [ ] Add min/ max for checkboxGroup
+- [x] Add min/ max for checkboxGroup
 
 ### Basic usage
 
