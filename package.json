@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --hot --mode development --config tools/webpack.dev.js",
     "build": "webpack --mode production --config tools/webpack.prod.js",
+    "docs": "webpack --mode production --config tools/webpack.docs.js",
     "prepublishOnly": "webpack --mode production --config tools/webpack.prod.js --env.isPublish",
     "test": "jest"
   },
