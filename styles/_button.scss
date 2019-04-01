@@ -23,3 +23,8 @@ $btn-default-round: 6px;
     @include button-variant($value);
   }
 }
+
+.sp-button--link {
+  background-color: transparent;
+  border-color: transparent;
+}

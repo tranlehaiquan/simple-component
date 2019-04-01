@@ -1,0 +1,74 @@
+$calender-border: 4px;
+$calender-select-btn-p: 0.7em;
+
+.sp-calender {
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  border: 1px solid $gray-300;
+  border-radius: $calender-border;
+  background-color: $white;
+}
+
+.sp-calender__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.sp-calender__body {
+  padding: 0.5em;
+}
+
+.sp-calender__arrow {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  font-size: 23px;
+  transition: .2s fill;
+  &:hover {
+    fill: $primary;
+  }
+}
+
+.sp-calender__date {
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  padding: $calender-select-btn-p;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.sp-calender__date--inmonth {
+  &:hover {
+    color: $primary;
+  }
+}
+
+.sp-calender__date--today {
+  color: $primary;
+  font-weight: 700;
+}
+
+.sp-calender__date--selected {
+  color: $primary;
+}
+
+.sp-calender__date--previous,
+.sp-calender__date--next {
+  color: $gray-500;
+}
+
+.sp-calender__days-name {
+  display: flex;
+  border-bottom: 1px solid $gray-300;
+}
+
+.sp-calender__day-name {
+  flex: 1;
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 0.7em;
+  margin: 0;
+  color: lighten($color: #000000, $amount: 60);
+}
