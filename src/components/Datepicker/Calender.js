@@ -18,18 +18,20 @@ import getMonthCalender, {
 
 function Datepicker(props) {
   const { value } = props;
-  const [month, setMonth] = useState(THIS_MONTH);
-  const [year, setYear] = useState(THIS_YEAR);
+  const valueDate = new Date(value);
+
+  const [month, setMonth] = useState(isDate(valueDate) ? (valueDate.getMonth() + 1) : THIS_MONTH);
+  const [year, setYear] = useState(valueDate ? valueDate.getFullYear() : THIS_YEAR);
   useEffect(() => {
     const valueDate = new Date(value);
-    if (isDate(valueDate)) {
+    const isSameYearMonth = (valueDate.getMonth() + 1 === month) && valueDate.getFullYear() === year; 
+    if (isDate(valueDate) && !isSameYearMonth) {
       setMonth(valueDate.getMonth() + 1);
       setYear(valueDate.getFullYear());
     }
   }, [value]);
 
   const today = new Date();
-
 
   function renderHeader() {
     return(
