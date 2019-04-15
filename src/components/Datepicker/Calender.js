@@ -1,24 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import propTypes from 'prop-types';
-import classnames from 'classnames';
 
+import DatePanel from './Panel/DatePanel';
+import MonthPanel from './Panel/MonthPanel';
+import YearPanel from './Panel/YearPanel';
 import Icon from '../Icon/Icon';
-import getMonthCalender, {
+import {
   THIS_YEAR,
   THIS_MONTH,
-  CALENDAR_WEEKS,
-  DAYS_OF_WEEK,
   zeroPad,
   getPreviousMonth,
   getNextMonth,
-  isSameDay,
   isDate,
-  WEEK_DAYS
 } from '../../util/date';
 
 function Datepicker(props) {
-  const { value } = props;
-  const valueDate = new Date(value);
+  const { value, type } = props;
+  const valueDate = isDate(value) ? value : new Date(value);
 
   const [month, setMonth] = useState(isDate(valueDate) ? (valueDate.getMonth() + 1) : THIS_MONTH);
   const [year, setYear] = useState(valueDate ? valueDate.getFullYear() : THIS_YEAR);
@@ -31,9 +29,47 @@ function Datepicker(props) {
     }
   }, [value]);
 
-  const today = new Date();
+  const [view, setView] = useState(type);
 
+  /**
+   * Render header of calender
+   */
   function renderHeader() {
+    let label;
+
+    if (view === 'year') {
+      label = (
+        <a className="sp-calender__view-control">{ year }</a>
+      );
+    }
+
+    if (view === 'month') {
+      const typeIsTheSame = view === type;
+      label = (
+        <a onClick={typeIsTheSame ? undefined : changeViewToYear} className="sp-calender__view-control">{ year }</a>
+      );
+    }
+
+    if (view === 'day') {
+      const typeIsTheSame = view === type;
+      label = (
+        <>
+          <a 
+            onClick={typeIsTheSame ? undefined : changeViewToMonth} 
+            className="sp-calender__view-control"
+          >
+            { zeroPad(month, 2) }
+          </a> 
+          <a 
+            onClick={typeIsTheSame ? undefined : changeViewToYear} 
+            className="sp-calender__view-control"
+          >
+            { year }
+          </a>
+        </>
+      );
+    }
+    
     return(
       <div className="sp-calender__header">
         <button 
@@ -44,7 +80,7 @@ function Datepicker(props) {
         </button>
 
         <div className="sp-calender__current-title">
-          { zeroPad(month, 2) } { year }
+          { label }
         </div>
 
         <button 
@@ -57,63 +93,37 @@ function Datepicker(props) {
     );
   }
 
+  /**
+   * Render body of calender
+   */
   function renderBody() {
-    return renderDates();
-  }
-
-  function renderDates() {
-    // return Array [YYYY, MM, DD]
-    const dates = getMonthCalender(month, year);
-    const {month: previousMonth} = getPreviousMonth(month, year);
-    const {month: nextMonth} = getNextMonth(month, year);
-    const valueDateSelected = new Date(value);
-
-    const weeks = [... new Array(CALENDAR_WEEKS)].map((week, weekIndex) => {
-      const days = [... new Array(DAYS_OF_WEEK)].map((day, dayIndex) => {
-        const date = dates[DAYS_OF_WEEK * weekIndex + dayIndex];
-        const dateObject = new Date(date.join('-'));
-        const isToday = isSameDay(dateObject, today);
-        const isDayFromPreviousMonth = +date[1] === previousMonth;
-        const isDayFromNextMonth = +date[1] === nextMonth;
-        const isSelected = isDate(valueDateSelected) && isSameDay(valueDateSelected, dateObject);
-
-        return (
-          <button 
-            key={dayIndex} 
-            className={classnames('sp-calender__date', {
-              'sp-calender__date--today': isToday,
-              'sp-calender__date--previous': isDayFromPreviousMonth,
-              'sp-calender__date--next': isDayFromNextMonth,
-              'sp-calender__date--inmonth': !isDayFromPreviousMonth && !isDayFromNextMonth,
-              'sp-calender__date--selected': isSelected
-            })}
-            title={date.join('-')}
-            data-date={date.join('-')}
-            onClick={handleOnDateChange}
-          >
-            { date[2] }
-          </button>
-        );
-      });
-
-      return (<div key={weekIndex} className="sp-calender__row"> {days} </div>);
-    });
-
-    const weekDaysName = Object.keys(WEEK_DAYS).map((day) => {
-      return <p className="sp-calender__day-name" key={day}>{WEEK_DAYS[day]}</p>;
-    });
-
+    if(view === 'year') return <YearPanel year={year} onClick={handleOnDateChange} />;
+    if(view === 'month') return <MonthPanel year={year} onClick={handleOnDateChange} />;
+    
     return (
-      <div className="sp-calender__body">
-        <div className="sp-calender__days-name">
-          {weekDaysName}
-        </div>
-        {weeks}
-      </div>
+      <DatePanel 
+        month={month} 
+        year={year}
+        value={value} 
+        onClick={handleOnDateChange} 
+      />
     );
   }
 
+  /**
+   * Handle previous arrow click
+   */
   function handlePreviousClick() {
+    if(view === 'month') {
+      setYear(year - 1);
+      return;
+    }
+
+    if(view === 'year') {
+      setYear(year - 1);
+      return;
+    }
+
     const previousMont = getPreviousMonth(month, year);
     setMonth(previousMont.month);
 
@@ -121,7 +131,20 @@ function Datepicker(props) {
     setYear(previousMont.year);
   }
 
+  /**
+   * Handle next arrow click
+   */
   function handleNextClick() {
+    if(view === 'month') {
+      setYear(year + 1);
+      return;      
+    }
+
+    if(view === 'year') {
+      setYear(year + 1);
+      return;
+    }
+
     const previousMont = getNextMonth(month, year);
     setMonth(previousMont.month);
 
@@ -129,29 +152,75 @@ function Datepicker(props) {
     setYear(previousMont.year);
   }
 
-  function handleOnDateChange(e) {
+  /**
+   * Handle everytime date, month, year click
+   * @param {Number, String} value 
+   */
+  function handleOnDateChange(value) {
     const { onChange } = props;
-    const { target } = e;
-    const { date } = target.dataset;
 
-    onChange(date);
+    if(view === 'month') {
+      // value: 1992-01
+      const [newYear, newMonth] = value.split('-');
+      if(type !== 'month') {
+        setYear(+newYear);
+        setMonth(+newMonth);
+        changeViewToDay();
+      } else {
+        const newDate = new Date(valueDate);
+        newDate.setYear(newYear);
+        newDate.setMonth(+newMonth - 1);
+        onChange(newDate);
+      }
+      return;
+    }
+    
+    if(view === 'year') {
+      setYear(+value);
+      if(type !== 'year') {
+        changeViewToMonth();
+      } else {
+        const newDate = new Date(valueDate);
+        newDate.setYear(value);
+        onChange(newDate);
+      }
+      return;
+    }
+
+    onChange(value);
   }
+
+  /**
+   * return function change to view
+   * @param {String} name 
+   */
+  function changeViewTo(name) {
+    return () => setView(name);
+  }
+
+  const changeViewToYear = changeViewTo('year');
+  const changeViewToMonth = changeViewTo('month');
+  const changeViewToDay = changeViewTo('day');
 
   return (
     <div className="sp-calender">
       { renderHeader() }
-      { renderBody() }
+      <div className="sp-calender__body">
+        { renderBody() }
+      </div>
     </div>
   );
 }
 
 Datepicker.defaultProps = {
-  onChange: () => undefined
+  onChange: () => undefined,
+  type: 'day'
 };
 
 Datepicker.propTypes = {
-  value: propTypes.oneOfType([propTypes.string, Date]),
-  onChange: propTypes.func
+  value: propTypes.oneOfType([propTypes.string, propTypes.instanceOf(Date)]),
+  onChange: propTypes.func,
+  type: propTypes.oneOf(['year', 'month', 'day'])
 };
 
 export default Datepicker;

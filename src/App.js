@@ -12,7 +12,7 @@ const options = [1, 2, 3];
 
 class App extends Component {
   state = {
-    date: '1996-03-14',
+    date: new Date(),
     checkboxValue: [1],
     indeterminate: true,
     checkboxCheckedAll: false,
@@ -58,7 +58,7 @@ class App extends Component {
     return (
       <div style={styles.wrapper}>
         <div style={{ padding: '1em' }}>
-          <Calender onChange={this.handleDateChange} value={date} />
+          <Calender onChange={this.handleDateChange} value={date} type="year" />
         </div>
         <div style={{ padding: '1em' }}>
           <Toast
@@ -153,12 +153,6 @@ class App extends Component {
 
 const styles = {
   wrapper: {
-    height: '100vh',
-    width: '100vw',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column'
   },
   btn: {
     marginRight: 5,

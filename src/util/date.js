@@ -12,8 +12,28 @@ export const WEEK_DAYS = {
   Friday: 'Fri',
   Saturday: 'Sat'
 };
+
+export const YEARS_SHOW = 20;
+
+export const YEAR_MONTHS = {
+  January: 'Jan',
+  February: 'Feb',
+  March: 'Mar',
+  April: 'Apr',
+  May: 'May',
+  June: 'Jun',
+  July: 'July',
+  August: 'Aug',
+  September: 'Sep',
+  October: 'Oct',
+  November: 'Nov',
+  December: 'Dec'
+};
+
 // Weeks displayed on calendar
 export const CALENDAR_WEEKS = 6;
+// Years displayed on view year
+export const CALENDER_YEARS = 16;
 export const DAYS_OF_WEEK = Object.keys(WEEK_DAYS).length;
 /**
  * Detect if is leap year
@@ -109,9 +129,13 @@ export const getDateISO = (date = new Date) => {
   
 };
 
-// ({month, year}) Gets the month and year before the given month and year
-// For example: getPreviousMonth(1, 2000) => {month: 12, year: 1999}
-// while: getPreviousMonth(12, 2000) => {month: 11, year: 2000}
+/**
+ * Gets the month and year before the given month and year
+ * For example: getPreviousMonth(1, 2000) => {month: 12, year: 1999}
+ * while: getPreviousMonth(12, 2000) => {month: 11, year: 2000}
+ * @param {Number} month 
+ * @param {Number} year 
+ */
 export const getPreviousMonth = (month, year) => {
   const prevMonth = (month > 1) ? month - 1 : 12;
   const prevMonthYear = (month > 1) ? year : year - 1;
@@ -120,8 +144,14 @@ export const getPreviousMonth = (month, year) => {
 };
 
 // ({month, year}) Gets the month and year after the given month and year
-// For example: getNextMonth(1, 2000) => {month: 2, year: 2000}
-// while: getNextMonth(12, 2000) => {month: 1, year: 2001}
+
+/**
+ * Gets the month and year after the given month and year
+ * For example: getNextMonth(1, 2000) => {month: 2, year: 2000}
+ * while: getNextMonth(12, 2000) => {month: 1, year: 2001}
+ * @param {Number} month 
+ * @param {Number} year 
+ */
 export const getNextMonth = (month, year) => {
   const nextMonth = (month < 12) ? month + 1 : 1;
   const nextMonthYear = (month < 12) ? year : year + 1;

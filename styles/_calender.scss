@@ -1,11 +1,14 @@
 $calender-border: 4px;
-$calender-select-btn-p: 0.7em;
+$calender-select-btn-p: 0.3em;
+$calender-select-btn-span-p: 0.4em;
+$calender-max-width: 300px;
 
 .sp-calender {
   box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
   border: 1px solid $gray-300;
   border-radius: $calender-border;
   background-color: $white;
+  max-width: $calender-max-width;
 }
 
 .sp-calender__header {
@@ -30,13 +33,49 @@ $calender-select-btn-p: 0.7em;
   }
 }
 
+.sp-calender__row {
+  display: flex;
+}
+
+.sp-calender__month,
+.sp-calender__year {
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  padding: $calender-select-btn-p * 2;
+  flex: 1;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.sp-calender__month--current,
+.sp-calender__year--current {
+  color: $primary;
+  font-weight: 700;
+}
+
+.sp-calender__month--selected,
+.sp-calender__year--selected {
+  color: $primary;
+}
+
 .sp-calender__date {
   background-color: transparent;
   border-color: transparent;
   cursor: pointer;
-  padding: $calender-select-btn-p;
   display: inline-block;
   font-size: 14px;
+  position: relative;
+  padding: $calender-select-btn-p;
+  flex: 1;
+  & span {
+    padding: $calender-select-btn-span-p;
+    display: inline-block;
+    border-radius: 50%;
+    pointer-events: none;
+  }
 }
 
 .sp-calender__date--inmonth {
@@ -51,7 +90,11 @@ $calender-select-btn-p: 0.7em;
 }
 
 .sp-calender__date--selected {
-  color: $primary;
+  & span {
+    background-color: $primary;
+    color: white;
+    display: inline-block;
+  }
 }
 
 .sp-calender__date--previous,
@@ -71,4 +114,12 @@ $calender-select-btn-p: 0.7em;
   padding-bottom: 0.7em;
   margin: 0;
   color: lighten($color: #000000, $amount: 60);
+}
+
+.sp-calender__view-control {
+  cursor: pointer;
+  
+  &:not(:first-of-type) {
+    margin-left: 0.5em;  
+  }
 }
