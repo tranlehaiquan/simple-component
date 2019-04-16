@@ -12,6 +12,8 @@ import {
   getPreviousMonth,
   getNextMonth,
   isDate,
+  getYearPeriod,
+  YEARS_SHOW
 } from '../../util/date';
 
 function Datepicker(props) {
@@ -29,7 +31,7 @@ function Datepicker(props) {
     }
   }, [value]);
 
-  const [view, setView] = useState(type);
+  const [view, setView] = useState(type || 'day');
 
   /**
    * Render header of calender
@@ -38,8 +40,11 @@ function Datepicker(props) {
     let label;
 
     if (view === 'year') {
+      const yearPeriod = getYearPeriod(year);
       label = (
-        <a className="sp-calender__view-control">{ year }</a>
+        <a className="sp-calender__view-control">
+          {yearPeriod[0]} - {yearPeriod[1]}
+        </a>
       );
     }
 
@@ -120,7 +125,7 @@ function Datepicker(props) {
     }
 
     if(view === 'year') {
-      setYear(year - 1);
+      setYear(year - YEARS_SHOW);
       return;
     }
 
@@ -141,7 +146,7 @@ function Datepicker(props) {
     }
 
     if(view === 'year') {
-      setYear(year + 1);
+      setYear(year + YEARS_SHOW);
       return;
     }
 
@@ -214,7 +219,6 @@ function Datepicker(props) {
 
 Datepicker.defaultProps = {
   onChange: () => undefined,
-  type: 'day'
 };
 
 Datepicker.propTypes = {

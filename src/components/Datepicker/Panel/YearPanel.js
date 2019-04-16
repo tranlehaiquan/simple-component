@@ -2,12 +2,7 @@ import React, { memo } from 'react';
 import classnames from 'classnames';
 import propTypes from 'prop-types';
 import chunkArray from 'lodash/chunk';
-import { YEARS_SHOW } from '../../../util/date';
-
-function getStartYear(year) {
-  const yearTen = +`${year}`.slice(2,3).padEnd(2, 0);
-  return yearTen - (yearTen % YEARS_SHOW);
-}
+import { YEARS_SHOW, getYearPeriod } from '../../../util/date';
 
 /**
  * Render years between 20
@@ -16,8 +11,7 @@ function getStartYear(year) {
  */
 function YearPanel(props) {
   const { year, onClick } = props;
-  const yearBase = +`${year}`.slice(0, 2).padEnd(4, 0); // ex: 1992 -> 19
-  const yearStart = getStartYear(year); // ex: 1992 -> 90 
+  const yearBase = getYearPeriod(year)[0]; // ex: 1992 -> 1990
   const today = new Date();
 
   /**
@@ -31,21 +25,20 @@ function YearPanel(props) {
   }
 
   const years = [... new Array(YEARS_SHOW)].map((y, index) => {
-    const yearNumber = yearStart + index;
-    const isCurrent = yearBase + yearNumber === today.getFullYear();
-    const isSelected = yearBase + yearNumber === year;
+    const isCurrent = yearBase + index === today.getFullYear();
+    const isSelected = yearBase + index === year;
 
     return (
       <button 
-        key={yearBase + yearNumber}
-        data-year={yearBase + yearNumber}
+        key={yearBase + index}
+        data-year={yearBase + index}
         onClick={handleOnClick}
         className={classnames('sp-calender__year', {
           ['sp-calender__year--current']: isCurrent,
           ['sp-calender__year--selected']: isSelected,
         })}
       >
-        {yearBase + yearNumber}
+        {yearBase + index}
       </button>
     );
   });

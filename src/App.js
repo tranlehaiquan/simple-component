@@ -58,7 +58,9 @@ class App extends Component {
     return (
       <div style={styles.wrapper}>
         <div style={{ padding: '1em' }}>
-          <Calender onChange={this.handleDateChange} value={date} type="year" />
+          <Calender onChange={this.handleDateChange} value={date} />
+          <Calender onChange={this.handleDateChange} value={date} type="month"/>
+          <Calender onChange={this.handleDateChange} value={date} type="year"/>
         </div>
         <div style={{ padding: '1em' }}>
           <Toast

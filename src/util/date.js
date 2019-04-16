@@ -30,6 +30,19 @@ export const YEAR_MONTHS = {
   December: 'Dec'
 };
 
+/**
+ * Get year period (20 year)
+ * ex: 1992 -> [1980, 1999], 1930 -> [1920, 1939]
+ * @param {Number} year 
+ */
+export const getYearPeriod = (year) => {
+  const yearBase = +`${year}`.slice(0, 2).padEnd(4, 0); // ex: 1992 -> 1900
+  const decade = +`${year}`.slice(2,3).padEnd(2, 0);
+  const yearStart = decade - (decade % YEARS_SHOW);
+
+  return [yearBase + yearStart, yearBase + yearStart + (YEARS_SHOW - 1)];
+};
+
 // Weeks displayed on calendar
 export const CALENDAR_WEEKS = 6;
 // Years displayed on view year
