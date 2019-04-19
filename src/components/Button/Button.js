@@ -1,35 +1,33 @@
-import React, { Component } from 'react';
+import React, { memo } from 'react';
 import propTypes from 'prop-types';
 import classnames from 'classnames';
 
-export default class Button extends Component {
-  render() {
-    const {
-      autoFocus,
-      disabled,
-      nativeType,
-      type,
-      children,
-      ...restProps
-    } = this.props;
+function Button(props) {
+  const {
+    autoFocus,
+    disabled,
+    nativeType,
+    type,
+    children,
+    ...restProps
+  } = props;
 
-    const btnTypeClassname = type ? `sp-button--${type}` : '';
-    const btnClassnames = classnames('sp-button', btnTypeClassname, {
-      'sp-button--disabled': disabled,
-    });
+  const btnTypeClassname = type ? `sp-button--${type}` : '';
+  const btnClassnames = classnames('sp-button', btnTypeClassname, {
+    'sp-button--disabled': disabled,
+  });
 
-    return (
-      <button
-        autoFocus={autoFocus}
-        disabled={disabled}
-        type={nativeType}
-        className={btnClassnames}
-        {...restProps}
-      >
-        {children}
-      </button>
-    );
-  }
+  return (
+    <button
+      autoFocus={autoFocus}
+      disabled={disabled}
+      type={nativeType}
+      className={btnClassnames}
+      {...restProps}
+    >
+      {children}
+    </button>
+  );
 }
 
 Button.propTypes = {
@@ -51,3 +49,5 @@ Button.defaultProps = {
   // icon: '',
   // loading: false
 };
+
+export default memo(Button);

@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Checkbox from './Checkbox';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 
 describe('snapshot for checkbox', () => {
@@ -23,7 +23,7 @@ describe('snapshot for checkbox', () => {
 describe('Checkbox behavior', () => {
   test('Checkbox without group, spy', () => {
     const onChange = sinon.spy();
-    const component = shallow(
+    const component = mount(
       <div>
         <Checkbox value="organe" checked={true} onChange={onChange}/>
         <Checkbox value="banana" checked={false} onChange={onChange}/>
@@ -31,7 +31,7 @@ describe('Checkbox behavior', () => {
       </div>
     );
 
-    const checkbox = component.find('Checkbox').first();
+    const checkbox = component.find('input').first();
     checkbox.simulate('change');
 
     expect(onChange).toHaveProperty('callCount', 1);
