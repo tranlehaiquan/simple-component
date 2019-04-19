@@ -1,19 +1,19 @@
 import React, {
-  Component
+  memo
 } from 'react';
 import propTypes from 'prop-types';
 
-class RadioGroup extends Component {
-  handleOnClick = (value) => {
-    this.props.onChange(value);
+function RadioGroup(props) {
+  function handleOnClick(value) {
+    props.onChange(value);
   }
 
-  renderChildrent = () => {
+  function renderChildrent() {
     const {
       children,
       value,
       name
-    } = this.props;
+    } = props;
 
     const radios = React.Children.map(children, (radio) => {
       const checked = value == radio.props.value;
@@ -21,7 +21,7 @@ class RadioGroup extends Component {
       return React.cloneElement(
         radio, {
           checked,
-          onChange: this.handleOnClick,
+          onChange: handleOnClick,
           name
         }
       );
@@ -30,15 +30,13 @@ class RadioGroup extends Component {
     return radios;
   }
 
-  render() {
-    return ( 
-      <div className = "sp-radio__group" > 
-        {
-          this.renderChildrent()
-        } 
-      </div>
-    );
-  }
+  return ( 
+    <div className = "sp-radio__group" > 
+      {
+        renderChildrent()
+      } 
+    </div>
+  );
 }
 
 RadioGroup.propTypes = {
@@ -61,4 +59,4 @@ RadioGroup.defaultProps = {
   disabled: false
 };
 
-export default RadioGroup;
+export default memo(RadioGroup);

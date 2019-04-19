@@ -1,26 +1,24 @@
-import React, {
-  Component
-} from 'react';
+import React, { memo } from 'react';
 import propTypes from 'prop-types';
 
-class CheckboxGroup extends Component {
-  handleOnClick = (value, event) => {
-    const { min, max, values } = this.props;
+function CheckboxGroup(props) {
+  function handleOnClick(value, event) {
+    const { min, max, values } = props;
     const isChecked = event.target.checked;
 
     if(!isChecked && values.length <= min) return;
     if(isChecked && values.length >= max) return;
 
-    this.props.onChange(value, event);
+    props.onChange(value, event);
   }
 
-  renderChildrent = () => {
+  function renderChildrent() {
     const {
       children,
       values,
       name,
       disabled
-    } = this.props;
+    } = props;
 
     const radios = React.Children.map(children, (radio) => {
       const checked = values.includes(radio.props.value);
@@ -29,7 +27,7 @@ class CheckboxGroup extends Component {
       return React.cloneElement(
         radio, {
           checked,
-          onChange: this.handleOnClick,
+          onChange: handleOnClick,
           name,
           disabled: disabled || radioDisabled
         }
@@ -39,15 +37,13 @@ class CheckboxGroup extends Component {
     return radios;
   }
 
-  render() {
-    return ( 
-      <div className = "sp-radio__group" > 
-        {
-          this.renderChildrent()
-        } 
-      </div>
-    );
-  }
+  return ( 
+    <div className = "sp-radio__group" > 
+      {
+        renderChildrent()
+      } 
+    </div>
+  );
 }
 
 CheckboxGroup.propTypes = {
@@ -66,4 +62,4 @@ CheckboxGroup.defaultProps = {
   disabled: false
 };
 
-export default CheckboxGroup;
+export default memo(CheckboxGroup);
