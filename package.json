@@ -1,6 +1,6 @@
 {
   "name": "simple-components-react",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "Simple react component go from basic to adavance",
   "main": "dist/index.js",
   "scripts": {
@@ -52,8 +52,10 @@
   "dependencies": {
     "lodash": "^4.17.11",
     "prop-types": "^15.7.2",
-    "react": "^16.8.4",
     "react-transition-group": "^2.6.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.4"  
   },
   "jest": {
     "setupFilesAfterEnv": [
