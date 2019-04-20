@@ -48,7 +48,11 @@ module.exports = function (env = {}, agr) {
         filename: '[name].css',
         chunkFilename: '[id].css',
       })
-    ]
+    ],
+    externals: {
+      'react': 'react',
+      'react-dom': 'react-dom',
+    },
   }
 
   if (!env.isPublish) {
