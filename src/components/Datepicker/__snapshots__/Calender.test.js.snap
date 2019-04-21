@@ -1,0 +1,927 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render component calender 1`] = `
+<div
+  className="sp-calender"
+>
+  <div
+    className="sp-calender__header"
+  >
+    <button
+      className="sp-calender__arrow sp-calender__arrow--left"
+      onClick={[Function]}
+    >
+      <svg
+        className="sp-icon"
+        height={22}
+        viewBox="0 0 1024 1024"
+        width={22}
+      >
+        <path
+          d="M621.619 687.002c13.722 13.875 13.722 36.301 0 50.074-13.722 13.824-35.891 13.926-49.613 0l-196.096-200.090c-13.722-13.824-13.722-36.198 0-50.125l196.096-200.090c13.67-13.824 35.891-13.824 49.613 0 13.722 13.875 13.722 36.301 0 50.074l-160.819 175.155 160.819 175.002z"
+        />
+      </svg>
+    </button>
+    <div
+      className="sp-calender__current-title"
+    >
+      <a
+        className="sp-calender__view-control"
+        onClick={[Function]}
+      >
+        04
+      </a>
+      <a
+        className="sp-calender__view-control"
+        onClick={[Function]}
+      >
+        2019
+      </a>
+    </div>
+    <button
+      className="sp-calender__arrow sp-calender__arrow--right"
+      onClick={[Function]}
+    >
+      <svg
+        className="sp-icon"
+        height={22}
+        viewBox="0 0 1024 1024"
+        width={22}
+      >
+        <path
+          d="M563.2 512l-160.819-175.104c-13.722-13.824-13.722-36.198 0-50.074 13.722-13.824 35.891-13.824 49.613 0l196.096 200.090c13.722 13.875 13.722 36.301 0 50.125l-196.096 200.090c-13.67 13.926-35.891 13.824-49.613 0-13.722-13.773-13.722-36.198 0-50.074l160.819-175.053z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="sp-calender__body"
+  >
+    <div
+      className="sp-calender__days-name"
+    >
+      <p
+        className="sp-calender__day-name"
+      >
+        Sun
+      </p>
+      <p
+        className="sp-calender__day-name"
+      >
+        Mon
+      </p>
+      <p
+        className="sp-calender__day-name"
+      >
+        Tue
+      </p>
+      <p
+        className="sp-calender__day-name"
+      >
+        Wed
+      </p>
+      <p
+        className="sp-calender__day-name"
+      >
+        Thu
+      </p>
+      <p
+        className="sp-calender__day-name"
+      >
+        Fri
+      </p>
+      <p
+        className="sp-calender__day-name"
+      >
+        Sat
+      </p>
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+       
+      <button
+        className="sp-calender__date sp-calender__date--previous"
+        data-date="Sun Mar 31 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-03-31"
+      >
+        <span>
+          31
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Mon Apr 01 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-01"
+      >
+        <span>
+          01
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Tue Apr 02 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-02"
+      >
+        <span>
+          02
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Wed Apr 03 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-03"
+      >
+        <span>
+          03
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Thu Apr 04 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-04"
+      >
+        <span>
+          04
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Fri Apr 05 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-05"
+      >
+        <span>
+          05
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Sat Apr 06 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-06"
+      >
+        <span>
+          06
+        </span>
+      </button>
+       
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+       
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Sun Apr 07 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-07"
+      >
+        <span>
+          07
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Mon Apr 08 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-08"
+      >
+        <span>
+          08
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Tue Apr 09 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-09"
+      >
+        <span>
+          09
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Wed Apr 10 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-10"
+      >
+        <span>
+          10
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Thu Apr 11 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-11"
+      >
+        <span>
+          11
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Fri Apr 12 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-12"
+      >
+        <span>
+          12
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Sat Apr 13 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-13"
+      >
+        <span>
+          13
+        </span>
+      </button>
+       
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+       
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Sun Apr 14 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-14"
+      >
+        <span>
+          14
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Mon Apr 15 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-15"
+      >
+        <span>
+          15
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Tue Apr 16 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-16"
+      >
+        <span>
+          16
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Wed Apr 17 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-17"
+      >
+        <span>
+          17
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Thu Apr 18 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-18"
+      >
+        <span>
+          18
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Fri Apr 19 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-19"
+      >
+        <span>
+          19
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Sat Apr 20 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-20"
+      >
+        <span>
+          20
+        </span>
+      </button>
+       
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+       
+      <button
+        className="sp-calender__date sp-calender__date--today sp-calender__date--inmonth sp-calender__date--selected"
+        data-date="Sun Apr 21 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-21"
+      >
+        <span>
+          21
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Mon Apr 22 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-22"
+      >
+        <span>
+          22
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Tue Apr 23 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-23"
+      >
+        <span>
+          23
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Wed Apr 24 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-24"
+      >
+        <span>
+          24
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Thu Apr 25 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-25"
+      >
+        <span>
+          25
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Fri Apr 26 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-26"
+      >
+        <span>
+          26
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Sat Apr 27 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-27"
+      >
+        <span>
+          27
+        </span>
+      </button>
+       
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+       
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Sun Apr 28 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-28"
+      >
+        <span>
+          28
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Mon Apr 29 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-29"
+      >
+        <span>
+          29
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="Tue Apr 30 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-04-30"
+      >
+        <span>
+          30
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--next"
+        data-date="Wed May 01 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-05-01"
+      >
+        <span>
+          01
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--next"
+        data-date="Thu May 02 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-05-02"
+      >
+        <span>
+          02
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--next"
+        data-date="Fri May 03 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-05-03"
+      >
+        <span>
+          03
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--next"
+        data-date="Sat May 04 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-05-04"
+      >
+        <span>
+          04
+        </span>
+      </button>
+       
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+       
+      <button
+        className="sp-calender__date sp-calender__date--next"
+        data-date="Sun May 05 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-05-05"
+      >
+        <span>
+          05
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--next"
+        data-date="Mon May 06 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-05-06"
+      >
+        <span>
+          06
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--next"
+        data-date="Tue May 07 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-05-07"
+      >
+        <span>
+          07
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--next"
+        data-date="Wed May 08 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-05-08"
+      >
+        <span>
+          08
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--next"
+        data-date="Thu May 09 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-05-09"
+      >
+        <span>
+          09
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--next"
+        data-date="Fri May 10 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-05-10"
+      >
+        <span>
+          10
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--next"
+        data-date="Sat May 11 2019 07:00:00 GMT+0700 (Indochina Time)"
+        onClick={[Function]}
+        title="2019-05-11"
+      >
+        <span>
+          11
+        </span>
+      </button>
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Render component calender type month 1`] = `
+<div
+  className="sp-calender"
+>
+  <div
+    className="sp-calender__header"
+  >
+    <button
+      className="sp-calender__arrow sp-calender__arrow--left"
+      onClick={[Function]}
+    >
+      <svg
+        className="sp-icon"
+        height={22}
+        viewBox="0 0 1024 1024"
+        width={22}
+      >
+        <path
+          d="M621.619 687.002c13.722 13.875 13.722 36.301 0 50.074-13.722 13.824-35.891 13.926-49.613 0l-196.096-200.090c-13.722-13.824-13.722-36.198 0-50.125l196.096-200.090c13.67-13.824 35.891-13.824 49.613 0 13.722 13.875 13.722 36.301 0 50.074l-160.819 175.155 160.819 175.002z"
+        />
+      </svg>
+    </button>
+    <div
+      className="sp-calender__current-title"
+    >
+      <a
+        className="sp-calender__view-control"
+      >
+        2019
+      </a>
+    </div>
+    <button
+      className="sp-calender__arrow sp-calender__arrow--right"
+      onClick={[Function]}
+    >
+      <svg
+        className="sp-icon"
+        height={22}
+        viewBox="0 0 1024 1024"
+        width={22}
+      >
+        <path
+          d="M563.2 512l-160.819-175.104c-13.722-13.824-13.722-36.198 0-50.074 13.722-13.824 35.891-13.824 49.613 0l196.096 200.090c13.722 13.875 13.722 36.301 0 50.125l-196.096 200.090c-13.67 13.926-35.891 13.824-49.613 0-13.722-13.773-13.722-36.198 0-50.074l160.819-175.053z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="sp-calender__body"
+  >
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__month"
+        data-month="2019-1"
+        onClick={[Function]}
+      >
+        January
+      </button>
+      <button
+        className="sp-calender__month"
+        data-month="2019-2"
+        onClick={[Function]}
+      >
+        February
+      </button>
+      <button
+        className="sp-calender__month"
+        data-month="2019-3"
+        onClick={[Function]}
+      >
+        March
+      </button>
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__month"
+        data-month="2019-4"
+        onClick={[Function]}
+      >
+        April
+      </button>
+      <button
+        className="sp-calender__month"
+        data-month="2019-5"
+        onClick={[Function]}
+      >
+        May
+      </button>
+      <button
+        className="sp-calender__month"
+        data-month="2019-6"
+        onClick={[Function]}
+      >
+        June
+      </button>
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__month"
+        data-month="2019-7"
+        onClick={[Function]}
+      >
+        July
+      </button>
+      <button
+        className="sp-calender__month"
+        data-month="2019-8"
+        onClick={[Function]}
+      >
+        August
+      </button>
+      <button
+        className="sp-calender__month"
+        data-month="2019-9"
+        onClick={[Function]}
+      >
+        September
+      </button>
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__month"
+        data-month="2019-10"
+        onClick={[Function]}
+      >
+        October
+      </button>
+      <button
+        className="sp-calender__month"
+        data-month="2019-11"
+        onClick={[Function]}
+      >
+        November
+      </button>
+      <button
+        className="sp-calender__month"
+        data-month="2019-12"
+        onClick={[Function]}
+      >
+        December
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Render component calender type year 1`] = `
+<div
+  className="sp-calender"
+>
+  <div
+    className="sp-calender__header"
+  >
+    <button
+      className="sp-calender__arrow sp-calender__arrow--left"
+      onClick={[Function]}
+    >
+      <svg
+        className="sp-icon"
+        height={22}
+        viewBox="0 0 1024 1024"
+        width={22}
+      >
+        <path
+          d="M621.619 687.002c13.722 13.875 13.722 36.301 0 50.074-13.722 13.824-35.891 13.926-49.613 0l-196.096-200.090c-13.722-13.824-13.722-36.198 0-50.125l196.096-200.090c13.67-13.824 35.891-13.824 49.613 0 13.722 13.875 13.722 36.301 0 50.074l-160.819 175.155 160.819 175.002z"
+        />
+      </svg>
+    </button>
+    <div
+      className="sp-calender__current-title"
+    >
+      <a
+        className="sp-calender__view-control"
+      >
+        2000
+         - 
+        2019
+      </a>
+    </div>
+    <button
+      className="sp-calender__arrow sp-calender__arrow--right"
+      onClick={[Function]}
+    >
+      <svg
+        className="sp-icon"
+        height={22}
+        viewBox="0 0 1024 1024"
+        width={22}
+      >
+        <path
+          d="M563.2 512l-160.819-175.104c-13.722-13.824-13.722-36.198 0-50.074 13.722-13.824 35.891-13.824 49.613 0l196.096 200.090c13.722 13.875 13.722 36.301 0 50.125l-196.096 200.090c-13.67 13.926-35.891 13.824-49.613 0-13.722-13.773-13.722-36.198 0-50.074l160.819-175.053z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="sp-calender__body"
+  >
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__year"
+        data-year={2000}
+        onClick={[Function]}
+      >
+        2000
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={2001}
+        onClick={[Function]}
+      >
+        2001
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={2002}
+        onClick={[Function]}
+      >
+        2002
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={2003}
+        onClick={[Function]}
+      >
+        2003
+      </button>
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__year"
+        data-year={2004}
+        onClick={[Function]}
+      >
+        2004
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={2005}
+        onClick={[Function]}
+      >
+        2005
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={2006}
+        onClick={[Function]}
+      >
+        2006
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={2007}
+        onClick={[Function]}
+      >
+        2007
+      </button>
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__year"
+        data-year={2008}
+        onClick={[Function]}
+      >
+        2008
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={2009}
+        onClick={[Function]}
+      >
+        2009
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={2010}
+        onClick={[Function]}
+      >
+        2010
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={2011}
+        onClick={[Function]}
+      >
+        2011
+      </button>
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__year"
+        data-year={2012}
+        onClick={[Function]}
+      >
+        2012
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={2013}
+        onClick={[Function]}
+      >
+        2013
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={2014}
+        onClick={[Function]}
+      >
+        2014
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={2015}
+        onClick={[Function]}
+      >
+        2015
+      </button>
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__year"
+        data-year={2016}
+        onClick={[Function]}
+      >
+        2016
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={2017}
+        onClick={[Function]}
+      >
+        2017
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={2018}
+        onClick={[Function]}
+      >
+        2018
+      </button>
+      <button
+        className="sp-calender__year sp-calender__year--current sp-calender__year--selected"
+        data-year={2019}
+        onClick={[Function]}
+      >
+        2019
+      </button>
+    </div>
+  </div>
+</div>
+`;
