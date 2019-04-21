@@ -2,6 +2,10 @@
 
 This project huge inspice by Element Vue (React)
 
+## Rules for contribute component
+
+- If props for event please add `on` before, example: `onChange, onInput, onFocus, onLeave`
+
 ## Install
 
 `npm install simple-components-react`
@@ -55,8 +59,4 @@ For detail go google search : ).
 
 ## Questions
 
-- How to make own icon and use it? (Font icon/ SVG)
 
-### Add icon fontawesome
-
-Becasue fontawesome package give us more icon than need -> Increase size of package with icon never use, so i decided /dI'saI.dId/ make my own icon component with Icomoon.
