@@ -7,7 +7,9 @@
     "start": "webpack-dev-server --hot --mode development --config tools/webpack.dev.js",
     "build": "webpack --mode production --config tools/webpack.prod.js",
     "prepublishOnly": "webpack --mode production --config tools/webpack.prod.js --env.isPublish",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "keywords": [],
   "repository": {
@@ -48,7 +50,11 @@
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.3.1",
     "react-dom": "^16.8.6",
-    "react": "^16.8.6"
+    "react": "^16.8.6",
+    "@storybook/react": "^5.0.10",
+    "@storybook/addon-actions": "^5.0.10",
+    "@storybook/addon-links": "^5.0.10",
+    "@storybook/addons": "^5.0.10"
   },
   "dependencies": {
     "lodash": "^4.17.11",

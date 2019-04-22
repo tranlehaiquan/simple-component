@@ -42,7 +42,7 @@ function Radio(props) {
         tabIndex={disabled ? '-1' : '0'}
         onKeyDown={handleKeyPress}
       />
-      <span className="sp-radio__text">{children}</span>
+      <span className="sp-radio__text">{children || value}</span>
     </label>
   );
 }
