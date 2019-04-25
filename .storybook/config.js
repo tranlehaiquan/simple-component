@@ -1,4 +1,9 @@
-import { configure } from '@storybook/react';
+import { configure, addDecorator } from '@storybook/react';
+import React from 'react';
+
+// add global decorator
+const wrapper = (story) => <div style={styles.wrapper}>{story()}</div>;
+addDecorator(wrapper);
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../stories', true, /\.stories\.js$/);
@@ -7,3 +12,9 @@ function loadStories() {
 }
 
 configure(loadStories, module);
+
+const styles = {
+  wrapper: {
+    padding: '1em'
+  }
+};

@@ -21,7 +21,6 @@ function RadioState(props) {
 }
 
 storiesOf('Radio', module)
-  .addDecorator((story) => <div style={styles.wrapper}>{story()}</div>)
   .add('Normal Radio', () => (
     <RadioState>
       {(value, onChange) => (
@@ -45,10 +44,3 @@ storiesOf('Radio', module)
       )}
     </RadioState>
   ));
-
-
-const styles = {
-  wrapper: {
-    padding: '1em'
-  }
-}

@@ -3,6 +3,7 @@ import '../styles/index.scss';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { withInfo } from '@storybook/addon-info';
 
 import Calender from '../src/components/Datepicker/Calender';
 
@@ -18,18 +19,25 @@ function CalenderState(props) {
 }
 
 storiesOf('Calender', module)
-  .addDecorator((story) => <div style={styles.wrapper}>{story()}</div>)
+  .addDecorator(withInfo)
   .add('Normal', () => {
-      return (
-        <CalenderState>
-          {(date, onChange) => (
-            <>
-              { date.toString() }
-              <Calender onChange={onChange} value={date} />
-            </>
-          )}
-        </CalenderState>
+    return (
+      <CalenderState>
+        {(date, onChange) => (
+          <>
+            { date.toString() }
+            <Calender onChange={onChange} value={date} />
+          </>
+        )}
+      </CalenderState>
     );
+  }, {
+    info: {
+      inline: true, 
+      header: false, 
+      propTables: [Calender],
+      propTablesExclude: [CalenderState]
+    }
   })
   .add('Type year, month, day', () => {
     return (
@@ -37,17 +45,12 @@ storiesOf('Calender', module)
         {(date, onChange) => (
           <>
             { date.toString() }
-            <Calender onChange={onChange} value={date} style={styles.calender} />
-            <Calender onChange={onChange} value={date} type="month" style={styles.calender}/>
-            <Calender onChange={onChange} value={date} type="year" style={styles.calender}/>
+            <Calender onChange={onChange} value={date} />
+            <Calender onChange={onChange} value={date} type="month"/>
+            <Calender onChange={onChange} value={date} type="year"/>
           </>
         )}
       </CalenderState>
     );
   });
 
-  const styles = {
-    wrapper: {
-      padding: '1em'
-    }
-  };

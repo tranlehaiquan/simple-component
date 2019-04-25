@@ -5,11 +5,13 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import Button from '../src/components/Button/Button';
+import { withInfo } from '@storybook/addon-info';
 
 storiesOf('Button', module)
+  .addDecorator(withInfo)
   .add('Normal', () => (
     <>
-      <Button onClick={action('clicked')} disabled>
+      <Button onClick={action('clicked')}>
         Disabled button
       </Button>
       <Button onClick={action('clicked')} type="primary">
@@ -28,7 +30,8 @@ storiesOf('Button', module)
         Danger 😀 😎 👍 💯
       </Button>
     </>
-  ))
+  ), { info: {inline: true, header: false} }
+  )
   .add('Disabled button', () => (
     <>
       <Button onClick={action('clicked')} disabled>

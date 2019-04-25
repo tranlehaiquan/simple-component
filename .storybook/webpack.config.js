@@ -13,6 +13,23 @@ module.exports = async ({ config, mode }) => {
     include: path.resolve(__dirname, '../'),
   });
 
+  config.module.rules.push({
+    test: /\.(js|jsx)$/,
+    exclude: /node_modules/,
+    use: [
+      {
+        loader: 'babel-loader',
+        options: require('../babel.config.js')
+      },
+      {
+        loader: 'eslint-loader',
+        options: {
+          emitWarning: true
+        }
+      }
+    ]
+  })
+
   // Return the altered config
   return config;
 };

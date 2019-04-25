@@ -40,14 +40,6 @@ class TestToast extends React.PureComponent {
 }
 
 storiesOf('Toast message', module)
-  .addDecorator((story) => <div style={styles.wrapper}>{story()}</div>)
   .add('Normal Toast', () => (
     <TestToast />
   ));
-
-
-const styles = {
-  wrapper: {
-    padding: '1em'
-  }
-}

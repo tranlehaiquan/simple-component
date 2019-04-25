@@ -3,6 +3,7 @@ import '../styles/index.scss';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { withInfo } from '@storybook/addon-info';
 
 import Checkbox from '../src/components/Checkbox/Checkbox';
 import CheckboxGroup from '../src/components/Checkbox/CheckboxGroup';
@@ -29,7 +30,7 @@ function CheckBoxState(props) {
 }
 
 storiesOf('Checkbox', module)
-  .addDecorator((story) => <div style={styles.wrapper}>{story()}</div>)
+  .addDecorator(withInfo)
   .add('Normal checkbox', () => (
     <CheckBoxState>
       {(values, onChange) => (
@@ -39,7 +40,14 @@ storiesOf('Checkbox', module)
         </>
       )}
     </CheckBoxState>
-  ))
+  ), {
+    info: {
+      inline: true, 
+      header: false, 
+      propTables: [Checkbox, CheckboxGroup],
+      propTablesExclude: [CheckBoxState]
+    }
+  })
   .add('Disabled checkbox', () => (
     <Checkbox value="organe" name="vegetable" checked={false} disabled onChange={action('checkbox change')}/>
   ))
@@ -55,10 +63,3 @@ storiesOf('Checkbox', module)
       )}
     </CheckBoxState>
   ));
-
-
-const styles = {
-  wrapper: {
-    padding: '1em'
-  }
-};
