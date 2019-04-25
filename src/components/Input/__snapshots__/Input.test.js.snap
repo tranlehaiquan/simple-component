@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Input 1`] = `
+<div
+  className="sp-input sp-input--size-md"
+>
+  <input
+    autoComplete="false"
+    className="sp-input__inner"
+    disabled={false}
+    name=""
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    placeholder="hello the world"
+    readOnly={false}
+    required={false}
+  />
+</div>
+`;

@@ -1,0 +1,15 @@
+.sp-input {
+}
+
+.sp-input__inner {
+  background-color: #fff;
+  border: 1px solid $gray-400;
+  border-radius: 4px;
+  line-height: 40px;
+  padding: 0 1em;
+  display: inline-block;
+  &:focus {
+    outline: none;
+    border-color: $primary;
+  }
+}
