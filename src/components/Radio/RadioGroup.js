@@ -4,8 +4,8 @@ import React, {
 import propTypes from 'prop-types';
 
 function RadioGroup(props) {
-  function handleOnClick(value) {
-    props.onChange(value);
+  function handleOnClick(value, e) {
+    props.onChange(value, e);
   }
 
   function renderChildrent() {
