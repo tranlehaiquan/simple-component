@@ -103,8 +103,8 @@ Input.propTypes = {
   onFocus: propTypes.func,
   onBlur: propTypes.func,
   onChange: propTypes.func,
-  prefixIcon: propTypes.oneOfType(propTypes.string, propTypes.node),
-  suffixIcon: propTypes.oneOfType(propTypes.string, propTypes.node),
+  prefixIcon: propTypes.oneOfType([propTypes.string, propTypes.node]),
+  suffixIcon: propTypes.oneOfType([propTypes.string, propTypes.node]),
   prefix: propTypes.string,
   suffix: propTypes.string
 };
