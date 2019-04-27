@@ -33,8 +33,7 @@ function DatePanel(props) {
     e.stopPropagation();
 
     const { date } = e.target.dataset;
-    onClick(date, e);
-
+    onClick(new Date(date), e);
   }
 
   const weeks = [... new Array(CALENDAR_WEEKS)].map((week, weekIndex) => {
@@ -58,7 +57,7 @@ function DatePanel(props) {
             'sp-calender__date--selected': isSelected
           })}
           title={date.join('-')}
-          data-date={dateObject.toString()}
+          data-date={date.join('-')}
           onClick={handleOnDateChange}
         >
           <span>
