@@ -26,6 +26,12 @@
   color: $color;
 }
 
-@mixin input-variant($size) {
-  
+@mixin prefixRadius($radius) {
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin suffixRadius($radius) {
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
 }

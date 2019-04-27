@@ -379,7 +379,7 @@ exports[`Render component calender 1`] = `
         </span>
       </button>
       <button
-        className="sp-calender__date sp-calender__date--today sp-calender__date--inmonth sp-calender__date--selected"
+        className="sp-calender__date sp-calender__date--inmonth"
         data-date="Fri Apr 26 2019 07:00:00 GMT+0700 (Indochina Time)"
         onClick={[Function]}
         title="2019-04-26"
@@ -389,7 +389,7 @@ exports[`Render component calender 1`] = `
         </span>
       </button>
       <button
-        className="sp-calender__date sp-calender__date--inmonth"
+        className="sp-calender__date sp-calender__date--today sp-calender__date--inmonth sp-calender__date--selected"
         data-date="Sat Apr 27 2019 07:00:00 GMT+0700 (Indochina Time)"
         onClick={[Function]}
         title="2019-04-27"

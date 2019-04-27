@@ -52,3 +52,28 @@ $yiq-contrasted-threshold:  150 !default;
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark:             $gray-900 !default;
 $yiq-text-light:            $white !default;
+
+// Input variant
+$input-default-height: 40px;
+$input-p: 0 1em;
+$input-radius: 4px;
+$input-sizes: (
+  'md': (
+    line-height: 36px,
+    font-size: 14px
+  ),
+  'sm': (
+    line-height: 32px,
+    font-size: 13px
+  ),
+  'xs': (
+    line-height: 28px,
+    font-size: 12px
+  ),
+);
+
+$input-height: (
+  'md': 36px,
+  'sm': 32px,
+  'xs': 28px
+);

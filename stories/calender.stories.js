@@ -6,6 +6,7 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 
 import Calender from '../src/components/Datepicker/Calender';
+import DatePicker from '../src/components/Datepicker/DatePicker';
 
 function CalenderState(props) {
   const [date, setDate] = useState(new Date());
@@ -49,6 +50,15 @@ storiesOf('Calender', module)
             <Calender onChange={onChange} value={date} type="month"/>
             <Calender onChange={onChange} value={date} type="year"/>
           </>
+        )}
+      </CalenderState>
+    );
+  })
+  .add('DatePicker', () => {
+    return (
+      <CalenderState>
+        {(date, onChange) => (
+          <DatePicker placeholder="Pick date" onChange={onChange} value={date} />
         )}
       </CalenderState>
     );
