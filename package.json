@@ -7,7 +7,7 @@
     "start": "start-storybook -p 1403",
     "build": "webpack --mode production --config tools/webpack.prod.js",
     "prepublishOnly": "webpack --mode production --config tools/webpack.prod.js --env.isPublish",
-    "test": "jest",
+    "test": "set TZ=America/New_York && jest",
     "build-storybook": "build-storybook"
   },
   "keywords": [],
