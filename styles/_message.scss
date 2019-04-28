@@ -43,6 +43,8 @@ $toast-min-w: 300px;
 .p-toast__icon {
   display: inline-block;
   margin-right: 0.3em;
+  height: 1em;
+  width: 1em;
 }
 
 @each $color, $value in $theme-color {

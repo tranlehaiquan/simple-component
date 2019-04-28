@@ -1,15 +1,112 @@
+$input-text-extend-bg: #f5f7fa;
+$input-text-extend-cl: #909399;
+$input-border: 1px solid $gray-400;
+$input-bg: #fff;
+$input-icon-cl: #c0c4cc;
+
 .sp-input {
+  display: inline-flex;
+  position: relative;
+}
+
+%textExtend {
+  background-color: $input-text-extend-bg;
+  color: $input-text-extend-cl;
+  vertical-align: middle;
+  position: relative;
+  border: 1px solid $gray-400;
+  padding: $input-p;
+  display: inline-block;
+  line-height: $input-default-height;
+}
+
+.sp-input--prefix {
+  .sp-input__inner {
+    @include prefixRadius(0);
+  }
+}
+
+.sp-input--suffix {
+  .sp-input__inner {
+    @include suffixRadius(0);
+  }
+}
+
+.sp-input__prefix {
+  @extend %textExtend;
+  @include prefixRadius($input-radius);
+  border-right: 0;
+}
+
+.sp-input__suffix {
+  @extend %textExtend;
+  @include suffixRadius($input-radius);
+  border-left: 0;
 }
 
 .sp-input__inner {
-  background-color: #fff;
+  background-color: $input-bg;
   border: 1px solid $gray-400;
-  border-radius: 4px;
-  line-height: 40px;
-  padding: 0 1em;
+  border-radius: $input-radius;
+  line-height: $input-default-height;
+  padding: $input-p;
   display: inline-block;
   &:focus {
     outline: none;
     border-color: $primary;
   }
+}
+
+.sp-input__content {
+  position: relative;
+}
+
+@each $name, $value in $input-sizes {
+  .sp-input--size-#{$name} {
+    .sp-input__inner {
+      line-height: map-get($value, line-height);
+      height: map-get($value, line-height);
+      font-size: map-get($value, font-size);
+    }
+
+    .sp-input__prefix, 
+    .sp-input__suffix {
+      line-height: map-get($value, line-height);
+      height: map-get($value, line-height);    
+    }
+  }
+}
+
+// For prefixIcon, suffixIcon
+%iconExtend {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  fill: $input-icon-cl;
+  color: $input-icon-cl;
+  pointer-events: none;
+}
+
+.sp-input--prefix-icon {
+  .sp-input__inner {
+    padding-left: 26px;
+  }
+}
+
+.sp-input--suffix-icon {
+  .sp-input__inner {
+    padding-right: 26px;
+  }
+}
+
+.sp-input__prefix-icon {
+  @extend %iconExtend;
+  left: 5px;
+}
+
+.sp-input__suffix-icon {
+  @extend %iconExtend;
+  right: 5px;
 }
