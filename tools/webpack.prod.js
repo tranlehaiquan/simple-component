@@ -10,7 +10,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = function (env = {}, agr) {
   const config = {
-    entry: path.resolve(__dirname, '../src/build.js'),
+    entry: path.resolve(__dirname, '../src/index.js'),
     output: {
       path: path.resolve(__dirname, '../dist'),
       libraryTarget: 'commonjs2',
@@ -41,9 +41,7 @@ module.exports = function (env = {}, agr) {
     },
     // finally we pass it an array of our plugins
     plugins: [
-      new CleanWebpackPlugin("dist", {
-        root: path.resolve(__dirname, '..')
-      }),
+      new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({
         filename: '[name].css',
         chunkFilename: '[id].css',
