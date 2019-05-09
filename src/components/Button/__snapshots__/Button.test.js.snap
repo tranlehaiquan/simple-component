@@ -5,6 +5,7 @@ exports[`renderButton 1`] = `
   autoFocus={false}
   className="sp-button"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   ABC

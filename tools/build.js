@@ -4,6 +4,9 @@ const { promisify } = require('util');
 const stat = promisify(fs.stat);
 const mkdir = promisify(fs.mkdir);
 const fsExtra = require('fs-extra');
+const webpack = require('webpack');
+const argv = require('yargs').argv;
+const webpackConfig = require('./webpack.prod')(argv);
 
 const distPath = path.resolve(__dirname, '..', './dist');
 const npmPath = path.resolve(__dirname, '..', './dist', './npm');
@@ -28,5 +31,11 @@ async function copySrcToDist() {
 (async () => {
   await clearnDist();
   await copySrcToDist();
+
+  webpack(webpackConfig, (err, stats) => {
+    if (err || stats.hasErrors()) {
+      console.log(err) || stats.hasErrors();
+    }
+  });
 })();
 

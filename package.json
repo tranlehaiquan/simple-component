@@ -1,12 +1,12 @@
 {
   "name": "simple-components-react",
-  "version": "1.0.11",
+  "version": "1.0.13",
   "description": "Simple react component go from basic to adavance",
-  "main": "dist/index.js",
+  "main": "dist/npm/index.js",
   "scripts": {
     "start": "start-storybook -p 1403",
-    "build": "webpack --mode production --config tools/webpack.prod.js",
-    "prepublishOnly": "webpack --mode production --config tools/webpack.prod.js --env.isPublish",
+    "build": "node ./tools/build.js",
+    "prepublishOnly": "node ./tools/build.js --isPublish=true",
     "test": "set TZ=America/New_York && jest",
     "build-storybook": "build-storybook"
   },
@@ -32,10 +32,10 @@
     "@types/node": "^12.0.0",
     "@types/react-dom": "^16.8.4",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^24.7.1",
+    "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.5",
     "classnames": "^2.2.6",
-    "clean-webpack-plugin": "^2.0.1",
+    "clean-webpack-plugin": "^2.0.2",
     "css-loader": "^2.1.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
@@ -44,7 +44,7 @@
     "eslint-plugin-react": "^7.13.0",
     "fs-extra": "^7.0.1",
     "html-webpack-plugin": "^3.2.0",
-    "jest": "^24.7.1",
+    "jest": "^24.8.0",
     "markdown-loader": "^5.0.0",
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.12.0",
@@ -59,8 +59,9 @@
     "typescript": "^3.4.5",
     "webpack": "^4.30.0",
     "webpack-bundle-analyzer": "^3.3.2",
-    "webpack-cli": "^3.3.1",
-    "webpack-dev-server": "^3.3.1"
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1",
+    "yargs": "^13.2.2"
   },
   "dependencies": {
     "@types/react": "^16.8.16",
@@ -69,7 +70,9 @@
     "react-transition-group": "^4.0.0"
   },
   "peerDependencies": {
-    "react": "^16.8.6"
+    "react": "^16.8.6",
+    "lodash": "^4.17.11",
+    "react-dom": "^16.8.6"
   },
   "jest": {
     "setupFilesAfterEnv": [
