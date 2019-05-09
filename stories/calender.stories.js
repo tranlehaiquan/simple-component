@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 
-import DatePicker, { Calender } from '../src/components/DatePicker';
+import { default as DatePicker, Calender } from '../src/components/DatePicker';
 
 function CalenderState(props) {
   const [date, setDate] = useState(new Date());
