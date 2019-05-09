@@ -46,7 +46,7 @@ storiesOf('Calender', module)
         {(date, onChange) => (
           <>
             { date.toString() }
-            <Calender onChange={onChange} value={date} type />
+            <Calender onChange={onChange} value={date} />
             <Calender onChange={onChange} value={date} type="month"/>
             <Calender onChange={onChange} value={date} type="year"/>
           </>
