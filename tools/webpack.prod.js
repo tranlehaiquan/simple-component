@@ -5,17 +5,18 @@
  */
 const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = function (env = {}) {
+module.exports = function (env = {}, agr) {
   const config = {
-    entry: path.resolve(__dirname, '../src/index.js'),
+    entry: path.resolve(__dirname, '../src/build.js'),
     output: {
-      path: path.resolve(__dirname, '../dist', './umd'),
-      library: 'simpleComponentsReact',
+      path: path.resolve(__dirname, '../dist'),
+      libraryTarget: 'commonjs2',
       filename: 'index.js'
     },
-    mode: 'production',
+
     module: {
       rules: [{
         test: /\.(js|jsx)$/,
@@ -40,7 +41,9 @@ module.exports = function (env = {}) {
     },
     // finally we pass it an array of our plugins
     plugins: [
-      // new CleanWebpackPlugin(),
+      new CleanWebpackPlugin("dist", {
+        root: path.resolve(__dirname, '..')
+      }),
       new MiniCssExtractPlugin({
         filename: '[name].css',
         chunkFilename: '[id].css',
@@ -49,12 +52,6 @@ module.exports = function (env = {}) {
     externals: {
       'react': 'react',
       'react-dom': 'react-dom',
-      lodash: {
-        commonjs: 'lodash',
-        commonjs2: 'lodash',
-        amd: 'lodash',
-        root: '_'
-      }
     },
   }
 
