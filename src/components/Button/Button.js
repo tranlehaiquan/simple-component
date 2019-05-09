@@ -9,7 +9,6 @@ function Button(props) {
     nativeType,
     type,
     children,
-    onClick,
     ...restProps
   } = props;
 
@@ -24,7 +23,6 @@ function Button(props) {
       disabled={disabled}
       type={nativeType}
       className={btnClassnames}
-      onClick={onClick}
       {...restProps}
     >
       {children}
@@ -38,7 +36,6 @@ Button.propTypes = {
   type: propTypes.string,
   nativeType: propTypes.oneOf(['button', 'submit', 'reset']),
   children: propTypes.node,
-  onClick: propTypes.func,
   // icon: propTypes.string,
   // loading: propTypes.bool
 };
@@ -49,7 +46,6 @@ Button.defaultProps = {
   type: '',
   nativeType: 'button',
   children: null,
-  onClick: () => undefined
   // icon: '',
   // loading: false
 };

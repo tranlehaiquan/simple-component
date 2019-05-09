@@ -5,7 +5,8 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 
-import DatePicker, { Calender } from '../src/components/DatePicker';
+import Calender from '../src/components/Datepicker/Calender';
+import DatePicker from '../src/components/Datepicker/DatePicker';
 
 function CalenderState(props) {
   const [date, setDate] = useState(new Date());
@@ -27,7 +28,6 @@ storiesOf('Calender', module)
           <>
             { date.toString() }
             <Calender onChange={onChange} value={date} />
-            
           </>
         )}
       </CalenderState>
