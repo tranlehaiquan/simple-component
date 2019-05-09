@@ -16,7 +16,7 @@ import {
   YEARS_SHOW
 } from '../../util/date';
 
-function Datepicker(props) {
+function Calender(props) {
   const { value, type } = props;
   const valueDate = isDate(value) ? value : new Date(value);
 
@@ -217,14 +217,14 @@ function Datepicker(props) {
   );
 }
 
-Datepicker.defaultProps = {
+Calender.defaultProps = {
   onChange: () => undefined,
 };
 
-Datepicker.propTypes = {
+Calender.propTypes = {
   value: propTypes.oneOfType([propTypes.string, propTypes.instanceOf(Date)]),
   onChange: propTypes.func,
   type: propTypes.oneOf(['year', 'month', 'day'])
 };
 
-export default Datepicker;
+export default Calender;
