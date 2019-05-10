@@ -1,0 +1,927 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render component calender 1`] = `
+<div
+  className="sp-calender"
+>
+  <div
+    className="sp-calender__header"
+  >
+    <button
+      className="sp-calender__arrow sp-calender__arrow--left"
+      onClick={[Function]}
+    >
+      <svg
+        className="sp-icon"
+        height={22}
+        viewBox="0 0 1024 1024"
+        width={22}
+      >
+        <path
+          d="M621.619 687.002c13.722 13.875 13.722 36.301 0 50.074-13.722 13.824-35.891 13.926-49.613 0l-196.096-200.090c-13.722-13.824-13.722-36.198 0-50.125l196.096-200.090c13.67-13.824 35.891-13.824 49.613 0 13.722 13.875 13.722 36.301 0 50.074l-160.819 175.155 160.819 175.002z"
+        />
+      </svg>
+    </button>
+    <div
+      className="sp-calender__current-title"
+    >
+      <a
+        className="sp-calender__view-control"
+        onClick={[Function]}
+      >
+        03
+      </a>
+      <a
+        className="sp-calender__view-control"
+        onClick={[Function]}
+      >
+        1996
+      </a>
+    </div>
+    <button
+      className="sp-calender__arrow sp-calender__arrow--right"
+      onClick={[Function]}
+    >
+      <svg
+        className="sp-icon"
+        height={22}
+        viewBox="0 0 1024 1024"
+        width={22}
+      >
+        <path
+          d="M563.2 512l-160.819-175.104c-13.722-13.824-13.722-36.198 0-50.074 13.722-13.824 35.891-13.824 49.613 0l196.096 200.090c13.722 13.875 13.722 36.301 0 50.125l-196.096 200.090c-13.67 13.926-35.891 13.824-49.613 0-13.722-13.773-13.722-36.198 0-50.074l160.819-175.053z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="sp-calender__body"
+  >
+    <div
+      className="sp-calender__days-name"
+    >
+      <p
+        className="sp-calender__day-name"
+      >
+        Sun
+      </p>
+      <p
+        className="sp-calender__day-name"
+      >
+        Mon
+      </p>
+      <p
+        className="sp-calender__day-name"
+      >
+        Tue
+      </p>
+      <p
+        className="sp-calender__day-name"
+      >
+        Wed
+      </p>
+      <p
+        className="sp-calender__day-name"
+      >
+        Thu
+      </p>
+      <p
+        className="sp-calender__day-name"
+      >
+        Fri
+      </p>
+      <p
+        className="sp-calender__day-name"
+      >
+        Sat
+      </p>
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+       
+      <button
+        className="sp-calender__date sp-calender__date--previous"
+        data-date="1996-02-25"
+        onClick={[Function]}
+        title="1996-02-25"
+      >
+        <span>
+          25
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--previous"
+        data-date="1996-02-26"
+        onClick={[Function]}
+        title="1996-02-26"
+      >
+        <span>
+          26
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--previous"
+        data-date="1996-02-27"
+        onClick={[Function]}
+        title="1996-02-27"
+      >
+        <span>
+          27
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--previous"
+        data-date="1996-02-28"
+        onClick={[Function]}
+        title="1996-02-28"
+      >
+        <span>
+          28
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--previous"
+        data-date="1996-02-29"
+        onClick={[Function]}
+        title="1996-02-29"
+      >
+        <span>
+          29
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-01"
+        onClick={[Function]}
+        title="1996-03-01"
+      >
+        <span>
+          01
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-02"
+        onClick={[Function]}
+        title="1996-03-02"
+      >
+        <span>
+          02
+        </span>
+      </button>
+       
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+       
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-03"
+        onClick={[Function]}
+        title="1996-03-03"
+      >
+        <span>
+          03
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-04"
+        onClick={[Function]}
+        title="1996-03-04"
+      >
+        <span>
+          04
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-05"
+        onClick={[Function]}
+        title="1996-03-05"
+      >
+        <span>
+          05
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-06"
+        onClick={[Function]}
+        title="1996-03-06"
+      >
+        <span>
+          06
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-07"
+        onClick={[Function]}
+        title="1996-03-07"
+      >
+        <span>
+          07
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-08"
+        onClick={[Function]}
+        title="1996-03-08"
+      >
+        <span>
+          08
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-09"
+        onClick={[Function]}
+        title="1996-03-09"
+      >
+        <span>
+          09
+        </span>
+      </button>
+       
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+       
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-10"
+        onClick={[Function]}
+        title="1996-03-10"
+      >
+        <span>
+          10
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-11"
+        onClick={[Function]}
+        title="1996-03-11"
+      >
+        <span>
+          11
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-12"
+        onClick={[Function]}
+        title="1996-03-12"
+      >
+        <span>
+          12
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-13"
+        onClick={[Function]}
+        title="1996-03-13"
+      >
+        <span>
+          13
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth sp-calender__date--selected"
+        data-date="1996-03-14"
+        onClick={[Function]}
+        title="1996-03-14"
+      >
+        <span>
+          14
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-15"
+        onClick={[Function]}
+        title="1996-03-15"
+      >
+        <span>
+          15
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-16"
+        onClick={[Function]}
+        title="1996-03-16"
+      >
+        <span>
+          16
+        </span>
+      </button>
+       
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+       
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-17"
+        onClick={[Function]}
+        title="1996-03-17"
+      >
+        <span>
+          17
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-18"
+        onClick={[Function]}
+        title="1996-03-18"
+      >
+        <span>
+          18
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-19"
+        onClick={[Function]}
+        title="1996-03-19"
+      >
+        <span>
+          19
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-20"
+        onClick={[Function]}
+        title="1996-03-20"
+      >
+        <span>
+          20
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-21"
+        onClick={[Function]}
+        title="1996-03-21"
+      >
+        <span>
+          21
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-22"
+        onClick={[Function]}
+        title="1996-03-22"
+      >
+        <span>
+          22
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-23"
+        onClick={[Function]}
+        title="1996-03-23"
+      >
+        <span>
+          23
+        </span>
+      </button>
+       
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+       
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-24"
+        onClick={[Function]}
+        title="1996-03-24"
+      >
+        <span>
+          24
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-25"
+        onClick={[Function]}
+        title="1996-03-25"
+      >
+        <span>
+          25
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-26"
+        onClick={[Function]}
+        title="1996-03-26"
+      >
+        <span>
+          26
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-27"
+        onClick={[Function]}
+        title="1996-03-27"
+      >
+        <span>
+          27
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-28"
+        onClick={[Function]}
+        title="1996-03-28"
+      >
+        <span>
+          28
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-29"
+        onClick={[Function]}
+        title="1996-03-29"
+      >
+        <span>
+          29
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-30"
+        onClick={[Function]}
+        title="1996-03-30"
+      >
+        <span>
+          30
+        </span>
+      </button>
+       
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+       
+      <button
+        className="sp-calender__date sp-calender__date--inmonth"
+        data-date="1996-03-31"
+        onClick={[Function]}
+        title="1996-03-31"
+      >
+        <span>
+          31
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--next"
+        data-date="1996-04-01"
+        onClick={[Function]}
+        title="1996-04-01"
+      >
+        <span>
+          01
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--next"
+        data-date="1996-04-02"
+        onClick={[Function]}
+        title="1996-04-02"
+      >
+        <span>
+          02
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--next"
+        data-date="1996-04-03"
+        onClick={[Function]}
+        title="1996-04-03"
+      >
+        <span>
+          03
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--next"
+        data-date="1996-04-04"
+        onClick={[Function]}
+        title="1996-04-04"
+      >
+        <span>
+          04
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--next"
+        data-date="1996-04-05"
+        onClick={[Function]}
+        title="1996-04-05"
+      >
+        <span>
+          05
+        </span>
+      </button>
+      <button
+        className="sp-calender__date sp-calender__date--next"
+        data-date="1996-04-06"
+        onClick={[Function]}
+        title="1996-04-06"
+      >
+        <span>
+          06
+        </span>
+      </button>
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Render component calender type month 1`] = `
+<div
+  className="sp-calender"
+>
+  <div
+    className="sp-calender__header"
+  >
+    <button
+      className="sp-calender__arrow sp-calender__arrow--left"
+      onClick={[Function]}
+    >
+      <svg
+        className="sp-icon"
+        height={22}
+        viewBox="0 0 1024 1024"
+        width={22}
+      >
+        <path
+          d="M621.619 687.002c13.722 13.875 13.722 36.301 0 50.074-13.722 13.824-35.891 13.926-49.613 0l-196.096-200.090c-13.722-13.824-13.722-36.198 0-50.125l196.096-200.090c13.67-13.824 35.891-13.824 49.613 0 13.722 13.875 13.722 36.301 0 50.074l-160.819 175.155 160.819 175.002z"
+        />
+      </svg>
+    </button>
+    <div
+      className="sp-calender__current-title"
+    >
+      <a
+        className="sp-calender__view-control"
+      >
+        1996
+      </a>
+    </div>
+    <button
+      className="sp-calender__arrow sp-calender__arrow--right"
+      onClick={[Function]}
+    >
+      <svg
+        className="sp-icon"
+        height={22}
+        viewBox="0 0 1024 1024"
+        width={22}
+      >
+        <path
+          d="M563.2 512l-160.819-175.104c-13.722-13.824-13.722-36.198 0-50.074 13.722-13.824 35.891-13.824 49.613 0l196.096 200.090c13.722 13.875 13.722 36.301 0 50.125l-196.096 200.090c-13.67 13.926-35.891 13.824-49.613 0-13.722-13.773-13.722-36.198 0-50.074l160.819-175.053z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="sp-calender__body"
+  >
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__month"
+        data-month="1996-1"
+        onClick={[Function]}
+      >
+        January
+      </button>
+      <button
+        className="sp-calender__month"
+        data-month="1996-2"
+        onClick={[Function]}
+      >
+        February
+      </button>
+      <button
+        className="sp-calender__month"
+        data-month="1996-3"
+        onClick={[Function]}
+      >
+        March
+      </button>
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__month"
+        data-month="1996-4"
+        onClick={[Function]}
+      >
+        April
+      </button>
+      <button
+        className="sp-calender__month"
+        data-month="1996-5"
+        onClick={[Function]}
+      >
+        May
+      </button>
+      <button
+        className="sp-calender__month"
+        data-month="1996-6"
+        onClick={[Function]}
+      >
+        June
+      </button>
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__month"
+        data-month="1996-7"
+        onClick={[Function]}
+      >
+        July
+      </button>
+      <button
+        className="sp-calender__month"
+        data-month="1996-8"
+        onClick={[Function]}
+      >
+        August
+      </button>
+      <button
+        className="sp-calender__month"
+        data-month="1996-9"
+        onClick={[Function]}
+      >
+        September
+      </button>
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__month"
+        data-month="1996-10"
+        onClick={[Function]}
+      >
+        October
+      </button>
+      <button
+        className="sp-calender__month"
+        data-month="1996-11"
+        onClick={[Function]}
+      >
+        November
+      </button>
+      <button
+        className="sp-calender__month"
+        data-month="1996-12"
+        onClick={[Function]}
+      >
+        December
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Render component calender type year 1`] = `
+<div
+  className="sp-calender"
+>
+  <div
+    className="sp-calender__header"
+  >
+    <button
+      className="sp-calender__arrow sp-calender__arrow--left"
+      onClick={[Function]}
+    >
+      <svg
+        className="sp-icon"
+        height={22}
+        viewBox="0 0 1024 1024"
+        width={22}
+      >
+        <path
+          d="M621.619 687.002c13.722 13.875 13.722 36.301 0 50.074-13.722 13.824-35.891 13.926-49.613 0l-196.096-200.090c-13.722-13.824-13.722-36.198 0-50.125l196.096-200.090c13.67-13.824 35.891-13.824 49.613 0 13.722 13.875 13.722 36.301 0 50.074l-160.819 175.155 160.819 175.002z"
+        />
+      </svg>
+    </button>
+    <div
+      className="sp-calender__current-title"
+    >
+      <a
+        className="sp-calender__view-control"
+      >
+        1980
+         - 
+        1999
+      </a>
+    </div>
+    <button
+      className="sp-calender__arrow sp-calender__arrow--right"
+      onClick={[Function]}
+    >
+      <svg
+        className="sp-icon"
+        height={22}
+        viewBox="0 0 1024 1024"
+        width={22}
+      >
+        <path
+          d="M563.2 512l-160.819-175.104c-13.722-13.824-13.722-36.198 0-50.074 13.722-13.824 35.891-13.824 49.613 0l196.096 200.090c13.722 13.875 13.722 36.301 0 50.125l-196.096 200.090c-13.67 13.926-35.891 13.824-49.613 0-13.722-13.773-13.722-36.198 0-50.074l160.819-175.053z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="sp-calender__body"
+  >
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__year"
+        data-year={1980}
+        onClick={[Function]}
+      >
+        1980
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={1981}
+        onClick={[Function]}
+      >
+        1981
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={1982}
+        onClick={[Function]}
+      >
+        1982
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={1983}
+        onClick={[Function]}
+      >
+        1983
+      </button>
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__year"
+        data-year={1984}
+        onClick={[Function]}
+      >
+        1984
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={1985}
+        onClick={[Function]}
+      >
+        1985
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={1986}
+        onClick={[Function]}
+      >
+        1986
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={1987}
+        onClick={[Function]}
+      >
+        1987
+      </button>
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__year"
+        data-year={1988}
+        onClick={[Function]}
+      >
+        1988
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={1989}
+        onClick={[Function]}
+      >
+        1989
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={1990}
+        onClick={[Function]}
+      >
+        1990
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={1991}
+        onClick={[Function]}
+      >
+        1991
+      </button>
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__year"
+        data-year={1992}
+        onClick={[Function]}
+      >
+        1992
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={1993}
+        onClick={[Function]}
+      >
+        1993
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={1994}
+        onClick={[Function]}
+      >
+        1994
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={1995}
+        onClick={[Function]}
+      >
+        1995
+      </button>
+    </div>
+    <div
+      className="sp-calender__row"
+    >
+      <button
+        className="sp-calender__year sp-calender__year--selected"
+        data-year={1996}
+        onClick={[Function]}
+      >
+        1996
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={1997}
+        onClick={[Function]}
+      >
+        1997
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={1998}
+        onClick={[Function]}
+      >
+        1998
+      </button>
+      <button
+        className="sp-calender__year"
+        data-year={1999}
+        onClick={[Function]}
+      >
+        1999
+      </button>
+    </div>
+  </div>
+</div>
+`;
