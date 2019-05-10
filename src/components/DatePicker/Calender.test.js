@@ -5,7 +5,6 @@ import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 
 test('Render component calender', () => {
-  console.log((new Date('1996-03-14')).toUTCString());
   const component = renderer.create(
 		<Calender onChange={() => {}} value={new Date('1996-03-14')} />
 	);
