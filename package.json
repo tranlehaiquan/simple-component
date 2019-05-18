@@ -1,6 +1,6 @@
 {
   "name": "simple-components-react",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "Simple react component go from basic to adavance",
   "main": "dist/es5/index.js",
   "scripts": {
