@@ -1,5 +1,6 @@
 import { configure, addDecorator } from '@storybook/react';
 import React from 'react';
+import '../styles/index.scss';
 
 // add global decorator
 const wrapper = (story) => <div style={styles.wrapper}>{story()}</div>;

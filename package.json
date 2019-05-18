@@ -1,14 +1,15 @@
 {
   "name": "simple-components-react",
-  "version": "1.0.13",
+  "version": "1.0.21",
   "description": "Simple react component go from basic to adavance",
-  "main": "dist/npm/index.js",
+  "main": "dist/es5/index.js",
   "scripts": {
     "start": "start-storybook -p 1403",
-    "build": "node ./tools/build.js",
-    "prepublishOnly": "node ./tools/build.js --isPublish=true",
+    "prepublishOnly": "npm run build",
     "test": "set TZ=America/New_York && jest",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prebuild": "rimraf dist",
+    "build": "cross-env NODE_ENV=production babel src --out-dir dist/es5 --config-file ./babel.config.js --copy-files --ignore *.test.js"
   },
   "keywords": [],
   "repository": {
@@ -29,16 +30,17 @@
     "@storybook/addon-links": "^5.0.11",
     "@storybook/addons": "^5.0.11",
     "@storybook/react": "^5.0.11",
-    "@types/node": "^12.0.0",
+    "@types/node": "^12.0.2",
     "@types/react-dom": "^16.8.4",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.8.0",
-    "babel-loader": "^8.0.5",
+    "babel-loader": "^8.0.6",
     "classnames": "^2.2.6",
     "clean-webpack-plugin": "^2.0.2",
+    "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-adapter-react-16": "^1.13.0",
     "eslint": "^5.16.0",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-react": "^7.13.0",
@@ -51,8 +53,9 @@
     "raw-loader": "^2.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-hot-loader": "^4.8.4",
+    "react-hot-loader": "^4.8.5",
     "react-test-renderer": "^16.8.6",
+    "rimraf": "^2.6.3",
     "sass-loader": "^7.1.0",
     "sinon": "^7.3.2",
     "style-loader": "^0.23.1",
@@ -60,14 +63,15 @@
     "webpack": "^4.31.0",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.3.1",
-    "yargs": "^13.2.2"
+    "webpack-dev-server": "^3.4.1",
+    "yargs": "^13.2.4"
   },
   "dependencies": {
+    "@babel/cli": "^7.4.4",
     "@types/react": "^16.8.16",
     "lodash": "^4.17.11",
     "prop-types": "^15.7.2",
-    "react-transition-group": "^4.0.0"
+    "react-transition-group": "^4.0.1"
   },
   "peerDependencies": {
     "react": "^16.8.6",
