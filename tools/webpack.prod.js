@@ -13,7 +13,9 @@ module.exports = function (env = {}) {
     output: {
       path: path.resolve(__dirname, '../dist', './umd'),
       library: 'simpleComponentsReact',
-      filename: 'index.js'
+      libraryTarget: 'umd',
+      filename: 'index.js',
+      globalObject: 'typeof self !== \'undefined\' ? self : this'
     },
     mode: 'production',
     module: {

@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/index.scss';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
