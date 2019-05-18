@@ -1,6 +1,7 @@
 # Simple Component
 
 This project huge inspice by Element Vue (React)
+Typescript defined inspice by Ui-material
 
 ## Rules for contribute component
 
@@ -18,7 +19,7 @@ Project Reactjs Component. Go from scratch /skrætʃ/.
   - [x] Step up eslint.
   - [ ] Step up new docs with seperate page for component
   - [x] Step up test
-  - [ ] Step up CI/CDs
+  - [x] Step up CI/CDs
   - [ ] Step up precommit? (Optional)
 
 ## Test
@@ -41,7 +42,11 @@ For detail go google search : ).
 
 ```
 ├── dist
-│   └── index.js
+│   └── es5
+│       ├── components
+│       ├── util
+│       ├── index.d.ts
+│       ├── index.js
 ├── src
 │   ├── components (All component go here)
 │   ├── util
@@ -52,7 +57,7 @@ For detail go google search : ).
 │   ├── *.scss
 │   ├── variables.scss
 │   └── index.scss (import all file scss)
-└── tools
+└── tools (not using for temporary)
     ├── webpack.dev.js
     └── webpack.build.js
 ```
