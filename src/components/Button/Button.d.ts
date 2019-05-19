@@ -3,10 +3,10 @@ import * as react from 'react';
 export interface ButtonProps {
   autoFocus?: boolean,
   disabled?: boolean,
-  type: string,
+  type: 'primary' | 'success' | 'info' | 'warning' | 'danger',
   nativeType: 'button'| 'submit'| 'reset',
   children: React.ReactNode,
-  onClick?( event: React.MouseEvent): void
+  onClick?( event: React.SyntheticEvent ): void
 }
 
 declare const Button: React.ComponentType<ButtonProps>;
