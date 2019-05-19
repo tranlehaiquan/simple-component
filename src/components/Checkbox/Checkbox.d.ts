@@ -4,7 +4,7 @@ export interface CheckboxProps {
   children?: React.ReactNode,
   checked?: boolean,
   onChange? (event: React.SyntheticEvent): void,
-  value: [number | string | boolean],
+  value: number | string | boolean,
   name?: string,
   disabled?: boolean,
   className?: string,
